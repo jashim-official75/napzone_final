@@ -926,3 +926,13 @@ apzone-final_2\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->han
 apzone-final_2\\server.php(21): require_once('C:\\\\laragon\\\\www\\\\...')
 #67 {main}
 "} 
+[2023-10-18 23:08:14] local.ERROR: There are no commands defined in the "generate" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"generate\" namespace. at D:\\laragon\\www\\napzone_final\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\laragon\\www\\napzone_final\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace('generate')
+#1 D:\\laragon\\www\\napzone_final\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('generate:key')
+#2 D:\\laragon\\www\\napzone_final\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\laragon\\www\\napzone_final\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\laragon\\www\\napzone_final\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 D:\\laragon\\www\\napzone_final\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
