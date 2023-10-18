@@ -1,0 +1,36 @@
+{
+	"name": "Apple & Lemons",
+	"short_name": "Apple & Lemons",
+	"description": "Apples & Lemons is a hyper casual puzzle game that is set in the fictional town of Lemons. You are a character who loves to play puzzles, and your focus is on completing tasks within the limited time frame. The game is built around a south-american take on the style of Apples and Lemons, where the focus is on the individualism of players’ tweets as they participate in a dialogue about the game.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"name": "Air War",
+	"short_name": "Air War",
+	"description": "It's time to battle the enemies through air attack to enforce the Power of the Supreme! Numerous aircraft, spaceships to battle with, knock them out with gunfire, missiles from your fighter jet! In the short run and gun. The Sky gets filled with smokes of gunfire and high-tech missiles resulting in a devastating aero strike. The surroundings get more batlesome as you progress through the game showcasing the real feel of the air force.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#000000",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

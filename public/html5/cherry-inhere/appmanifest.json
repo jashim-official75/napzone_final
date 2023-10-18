@@ -1,0 +1,36 @@
+{
+	"name": "Cherry Inhere",
+	"short_name": "Cherry Inhere",
+	"description": "Do you have the skills to keep something inside for long? Then Cherry Inhere brings you the perfect game to enhance your anticipating skills. The game that offers you the best feeling to witness one of the best ping pong games there is.  This pong ball game is ready to blow your mind. Your objective here will be to keep the ping ball in a circle. More of a tennis ball to keep within the circle. The more you keep the ping ball in the circle, the more you score!",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#000000",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

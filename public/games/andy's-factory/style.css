@@ -1,0 +1,24 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	
+	background: #000000;
+	color: white;
+}
+
+html, body, canvas {
+	touch-action: none;
+	touch-action-delay: none;
+}
+
+@font-face {
+	font-family: 'keep me';
+	src: url('fonts/keep me.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'qallegofont';
+	src: url('fonts/qallegofont.ttf') format('truetype');
+}
+

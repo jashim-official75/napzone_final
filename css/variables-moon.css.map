@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-moon.scss"
+    ],
+    "names": [],
+    "file": "variables-moon.css"
+}

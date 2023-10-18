@@ -1,0 +1,24 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	
+	background: #000000;
+	color: white;
+}
+
+html, body, canvas {
+	touch-action: none;
+	touch-action-delay: none;
+}
+
+@font-face {
+	font-family: 'mind boggle demo';
+	src: url('fonts/mind boggle demo.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'acmatic-personal';
+	src: url('fonts/acmatic-personal.otf') format('opentype');
+}
+

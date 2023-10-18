@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-time.scss"
+    ],
+    "names": [],
+    "file": "variables-time.min.css"
+}

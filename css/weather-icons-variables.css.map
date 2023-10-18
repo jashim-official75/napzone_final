@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../public/assets/backend/scss/icons/weather-icons/sass/weather-icons-variables.scss",
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-beaufort.scss",
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-time.scss",
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-moon.scss",
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-direction.scss",
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-day.scss",
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-night.scss",
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-neutral.scss",
+        "../public/assets/backend/scss/icons/weather-icons/sass/icon-variables/variables-misc.scss"
+    ],
+    "names": [],
+    "file": "weather-icons-variables.css"
+}

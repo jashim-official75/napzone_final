@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../public/assets/backend/plugins/tablesaw-master/src/tables.stack-mixin.scss"
+    ],
+    "names": [],
+    "file": "tables.stack-mixin.min.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,OAAO,CAAC,0EAAI,CA4FZ,AAAA,UAAU,AAAA,CACN,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,GAAG,CAAC,GAAG,CACP,QAAQ,CAAE,KAAK,CACf,OAAO,CAAE,KAAK,CACd,UAAU,CAAE,IAAI,CAMnB,AAZD,AAOI,UAPM,CAON,uBAAuB,AAAA,CACnB,QAAQ,CAAE,QAAQ,CAClB,GAAG,CAAE,iBAAiB,CACtB,IAAI,CAAE,iBAAiB,CAC1B",
+    "sources": [
+        "../public/assets/backend/scss/variable.scss"
+    ],
+    "names": [],
+    "file": "variable.min.css"
+}

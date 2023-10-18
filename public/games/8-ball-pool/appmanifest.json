@@ -1,0 +1,36 @@
+{
+	"name": "8 Ball Pool",
+	"short_name": "8 Ball Pool",
+	"description": "8 Ball Pool has introduced a new level system to keep you entertained. With this new system, you'll always face a challenge and get access to more exclusive match locations, where you play against only the best Pool players. You can also compete in tournaments and win rewards that improve your ranking.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}
