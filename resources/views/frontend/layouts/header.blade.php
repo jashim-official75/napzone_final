@@ -23,13 +23,20 @@
             @if(!empty($purchasePlanDetail) && $logIn == 1)
                 <a href="#" class="btn btn__primary ml-0 ml-md-5 my-sm-0" type="button" data-toggle="modal"
                 data-target="#unsubscribe">Unsubscribe</a>
-                <a href="{{ route('logout') }}" class="btn btn__primary mr-0 mr-md-5 ml-2 my-2 my-sm-0" type="button">Logout</a>
+                <a href="{{ route('logout') }}" class="btn btn__primary mr-0  ml-2 my-2 my-sm-0" type="button">Logout</a>
             @elseif($logIn == 1)
                 <a href="{{ route('logout') }}" class="btn btn__primary ml-5 my-2 my-sm-0" type="button">Logout</a>
             @else
                 <a href="#" class="btn btn__primary ml-5 my-2 my-sm-0" type="button" data-toggle="modal"
                 data-target="#login">Log In</a>
             @endif
+        </div>
+        <div class="profile_icon">
+            <i class="far fa-user-circle"></i>
+            <ul class="submenu">
+                <li><a href="#">Profile </a></li>
+                <li><a href="#">LogOut </a></li>
+            </ul>
         </div>
     </nav>
 </header>

@@ -1,3 +1,7 @@
+$(".profile_icon").click(function(){
+  $(".submenu").fadeToggle();
+});
+
 
         AOS.init({
           
