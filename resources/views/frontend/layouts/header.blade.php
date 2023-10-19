@@ -16,27 +16,26 @@
                     placeholder="Search Games.." value="{{ old('keyword') }}">
                 <button class="search-button">
                     <!--<i class="fas fa-search"></i>-->
-                    <img 
-                src="{{ asset('assets/frontend/img/search-icon.png') }}" alt="">
+                    <img src="{{ asset('assets/frontend/img/search-icon.png') }}" alt="">
                 </button>
             </form>
-            @if(!empty($purchasePlanDetail) && $logIn == 1)
+            {{-- @if (!empty($purchasePlanDetail) && $logIn == 1)
                 <a href="#" class="btn btn__primary ml-0 ml-md-5 my-sm-0" type="button" data-toggle="modal"
                 data-target="#unsubscribe">Unsubscribe</a>
-                <a href="{{ route('logout') }}" class="btn btn__primary mr-0  ml-2 my-2 my-sm-0" type="button">Logout</a>
-            @elseif($logIn == 1)
-                <a href="{{ route('logout') }}" class="btn btn__primary ml-5 my-2 my-sm-0" type="button">Logout</a>
+                <a href="{{ route('logout') }}" class="btn btn__primary mr-0  ml-2 my-2 my-sm-0" type="button">Logout</a> --}}
+            @if ($logIn == 1)
+                <div class="profile_icon">
+                    <i class="far fa-user-circle"></i>
+                    <ul class="submenu">
+                        <li><a href="{{ route('user.profile') }}">Profile </a></li>
+                        <li><a href="{{ route('logout') }}">LogOut </a></li>
+                    </ul>
+                </div>
             @else
                 <a href="#" class="btn btn__primary ml-5 my-2 my-sm-0" type="button" data-toggle="modal"
-                data-target="#login">Log In</a>
+                    data-target="#login">Log In</a>
             @endif
         </div>
-        <div class="profile_icon">
-            <i class="far fa-user-circle"></i>
-            <ul class="submenu">
-                <li><a href="#">Profile </a></li>
-                <li><a href="#">LogOut </a></li>
-            </ul>
-        </div>
+
     </nav>
 </header>

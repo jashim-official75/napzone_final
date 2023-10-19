@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\SubscriberController as BackendSubscriberContro
 use App\Http\Controllers\Frontend\GamePlayController;
 use App\Http\Controllers\Frontend\SupportController as FrontendSupportController;
 use App\Http\Controllers\Backend\SupportController as BackendSupportController;
+use App\Http\Controllers\Frontend\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -25,6 +26,7 @@ Route::post('/test_subscriber', [HomeController::class, 'test_sub_store'])->name
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/all-games', [HomeController::class, 'game'])->name('games');
 Route::get('/logout', [FrontendSubscriberController::class, 'logout'])->name('logout');
+Route::get('/profile', [ProfileController::class, 'profile'])->name('user.profile');
 Route::get('/search', [SearchAndCategoryController::class, 'search'])->name('search');
 Route::get('/category/{categoryName}', [SearchAndCategoryController::class, 'category'])->name('category');
 Route::get('/game/{categoryName}', [SearchAndCategoryController::class, 'category'])->name('category');
