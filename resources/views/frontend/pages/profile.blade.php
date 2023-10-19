@@ -10,7 +10,11 @@
             <div class="profile_header">
                 <h2>User Profile</h2>
                 <div class="unsubscribe">
-                    <a href="#" class="unsubscribe_btn">Unsubscribe</a>
+                    @if (!empty($purchasePlanDetail) && $logIn == 1)
+                        <a href="#" class="unsubscribe_btn" type="button" data-toggle="modal"
+                            data-target="#unsubscribe">Unsubscribe</a>
+                    @endif
+
                 </div>
             </div>
             <form action="{{ route('user.profile.update', $subscriber->id) }}" method="POST" enctype="multipart/form-data">

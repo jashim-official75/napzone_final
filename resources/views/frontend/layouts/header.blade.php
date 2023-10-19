@@ -10,7 +10,6 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             </ul>
-
             <form class="form-inline my-2 my-lg-0 search-box" action="{{ route('search') }}" method="get">
                 <input class="form-control mr-sm-2 search-input" type="search" name="keyword"
                     placeholder="Search Games.." value="{{ old('keyword') }}">
@@ -19,10 +18,6 @@
                     <img src="{{ asset('assets/frontend/img/search-icon.png') }}" alt="">
                 </button>
             </form>
-            {{-- @if (!empty($purchasePlanDetail) && $logIn == 1)
-                <a href="#" class="btn btn__primary ml-0 ml-md-5 my-sm-0" type="button" data-toggle="modal"
-                data-target="#unsubscribe">Unsubscribe</a>
-                <a href="{{ route('logout') }}" class="btn btn__primary mr-0  ml-2 my-2 my-sm-0" type="button">Logout</a> --}}
             @if ($logIn == 1)
                 <div class="profile_icon">
                     <i class="far fa-user-circle"></i>
