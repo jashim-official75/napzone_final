@@ -17,6 +17,9 @@ class CreateSubscribersTable extends Migration
             $table->id();
             $table->char('unique_id', 6)->unique();
             $table->string('phone_num');
+            $table->string('name')->nullable();
+            $table->string('image')->nullable();
+            $table->string('phone_num');
             $table->integer('otp_verified')->default(0);
             $table->string('token')->default(0);
             $table->timestamps();

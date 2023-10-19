@@ -27,6 +27,7 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/all-games', [HomeController::class, 'game'])->name('games');
 Route::get('/logout', [FrontendSubscriberController::class, 'logout'])->name('logout');
 Route::get('/profile', [ProfileController::class, 'profile'])->name('user.profile');
+Route::post('/profile/{id}', [ProfileController::class, 'profile_update'])->name('user.profile.update');
 Route::get('/search', [SearchAndCategoryController::class, 'search'])->name('search');
 Route::get('/category/{categoryName}', [SearchAndCategoryController::class, 'category'])->name('category');
 Route::get('/game/{categoryName}', [SearchAndCategoryController::class, 'category'])->name('category');

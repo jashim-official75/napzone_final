@@ -12,6 +12,8 @@ class Subscriber extends Model
     protected $fillable = [
         'unique_id',
         'phone_num',
+        'name',
+        'image',
         'otp_verified',
         'token'
     ];
