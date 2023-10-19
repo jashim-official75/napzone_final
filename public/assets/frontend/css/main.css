@@ -1,5 +1,166 @@
-      
+
+#profie_page 
+{
+  position: relative;
+  height: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profie_inner 
+{
+  background: rgba(255,255,255,0.1);
+  width: 500px;
+  max-width: 90%;
+  padding:1rem 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.profile_header 
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0 3rem;
+}
+.unsubscribe_btn 
+{
+  display: block;
+  background: rgba(255,255,255,0.1);
+  padding:0.2rem 0.8rem;
+  border-radius: 5px;
+  color: #fff8;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.unsubscribe_btn:hover 
+{
+  background: #f2b705;
+  color: #000;
+} 
+.profie_inner h2 
+{
+  font-size: clamp(1.2rem , 2vw , 1.6rem);
+  color: #fff;
+}
+.profile_img 
+{
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border: 0.15rem solid #f0e902;
+  box-shadow: 0 0 25px 15px rgba(242, 183, 5, 0.686),0 0 0 10px rgba(242, 183, 5, 0.186);
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.profile_img img 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img_upload_icon 
+{
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background: #0004;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.img_upload_icon i 
+{
+  color: #fff8;
+  font-size: 2rem;
+  transform: scale(0.6);
+}
+.profile_img:hover .img_upload_icon
+{
+  background: #000;
+}
+.profile_img:hover .img_upload_icon i 
+{
+  color: #fff;
+}
+
+.update_info 
+{
+  padding: 2rem 0;
+}
+.inputBx 
+{
+  position: relative;
+  width: 100%;
+}
+.update_info input 
+{
+  width: 100%;
+  margin-bottom: 1.5rem;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #fff2;
+  background: #fff2;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  box-shadow: 0 0 3px 0px #f2b705;
+}
+.update_info input:focus 
+{
+  border: 1px solid #f0e902;
+  box-shadow: 0 0 6px 0px #f0e902;
+} 
+.update_info input::placeholder 
+{
+  color: #fff8;
+} 
+.save_btn {
+  text-align: center;
+}
+.save_btn button
+{
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+  background: #f2b705;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border: 0.2rem solid #fff8;
+  box-shadow: 0 5px 2px rgba(0,0,0,0.2);
+}
+.save_btn button:hover 
+{
+  background: #fff;
+}
+#imageupload 
+{
+  display: none;
+
+}
 /* profile */
+
+
 .profile_icon {
   position: relative;
   color: #f2b705;
@@ -23,22 +184,24 @@
   position: absolute;
   top: 100%;
   right: -1.5rem;
-  background: #f2b705;
+  background: #1c2833;
   list-style: none;
   width: 150px;
   border-radius: 0 0 15px 15px;
   overflow: hidden;
   display: none;
-
+  border: 1px solid  #fff2;
+  border-top: none;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
 }
 .submenu li a 
 {
   padding: 1rem 0;
   display: block;
   text-align: center;
-  color: #000;
-  border-bottom: 1px solid #fff6;
-  border-top: 1px solid #0006;
+  color: #fff;
+  border-bottom: 1px solid #fff2;
+  border-top: 1px solid #0002;
 }
 .submenu li:last-child a
 {
@@ -47,7 +210,19 @@
 .submenu li a:hover 
 {
   background: #fff;
+  color: #000;
 } 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+   -moz-appearance: textfield;
+}
 /* profile */
 
 
@@ -394,12 +569,12 @@ header#header {
   margin-bottom: 0;
 }
 
-  .navbar {
-    padding: 0rem 4rem;
-    background: rgba(24, 33, 43, 0.562);
-    backdrop-filter: blur(30px);
-    border-bottom: 1px solid rgba(255,255,255,0.15) ;
-    height: 80px;
+.navbar {
+  padding: 0rem 4rem;
+  background: rgba(28, 40 ,51,0.8);
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  height: 80px;
 }
 .navbar-toggler {
     padding: 0.35rem .75rem !important;
