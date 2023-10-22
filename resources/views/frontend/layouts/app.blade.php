@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="monetization" content="$ilp.gatehub.net/315194256">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta property="og:image" content="https://napzone.games/napzone-og-image.png" />
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/frontend/img/favicon.png') }}">
     <!-- Bootstrap 4 -->
@@ -30,11 +31,22 @@
     <title>NapZone Games - Enjoy Most Exciting Games.</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PZRXW9C');</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PZRXW9C');
+    </script>
     <!-- End Google Tag Manager -->
 </head>
 
@@ -78,7 +90,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Js -->
     <script src="{{ asset('assets/frontend/js/app.js') }}"></script>
-    
+
     @yield('scripts')
     @if (@session('status'))
         <script>
@@ -98,6 +110,12 @@
         </script>
     @endif
     <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        
         window.livewire.on('confirm', () => {
             $('#login').modal('hide');
             Livewire.emit('refresh')

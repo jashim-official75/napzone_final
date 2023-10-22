@@ -34,16 +34,14 @@
                 </div>
                 <div class="update_info">
                     <div class="inputBx">
+                        <label class="text-light" for="">Name :</label>
                         <input type="text" name="username" id="username" value="{{ $subscriber->name }}"
                             placeholder="User Name">
                     </div>
                     <div class="inputBx">
+                        <label class="text-light" for="">Number :</label>
                         <input type="number" id="usernumber" readonly value="{{ $subscriber->phone_num }}"
                             placeholder="Phone Number">
-                    </div>
-                    <div class="inputBx">
-                        <input type="text" id="userid" readonly value="{{ $subscriber->unique_id }}"
-                            placeholder="User ID">
                     </div>
                     <div class="save_btn">
                         <button type="submit">Save</button>

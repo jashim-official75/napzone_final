@@ -2,17 +2,13 @@
 
 @section('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-@endsection
-
-@section('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.tandg__item').magnificPopup({
-                type: 'iframe'
-            });
-        });
-    </script>
+    <style>
+        .favorite_icon {
+            color: #f2b705;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -61,7 +57,7 @@
                         @foreach ($multiPlayerGame as $game)
                             <div class="col-xl-2 col-lg-3 col-md-4 col-6 taandtm__rr--item" data-aos="zoom-in-up">
                                 <div class="card-hover">
-                                    <a href="@if ($logIn == 1 && (!empty($purchasePlanDetail))) {{ route('game', $game->game_file) }} @else # @endif"
+                                    <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
                                         target="_blank"
                                         @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                         <img class="taandtm__rr--img"
@@ -93,7 +89,7 @@
                     @foreach ($exclusiveGames as $game)
                         <div class="col-xl-3 col-lg-4 col-md-4 col-6 card exgame__item" data-aos="zoom-in-up">
                             <div class="card-hover border-rad">
-                                <a href="@if ($logIn == 1 && (!empty($purchasePlanDetail))) {{ route('game', $game->game_file) }} @else # @endif"
+                                <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
                                     class="game-btn" target="_blank"
                                     @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                     <img class="card-img-top"
@@ -101,12 +97,21 @@
                                         alt="{{ $game->game_name }}">
                                     <div class="card-body">
                                         <h2 class="card-title">{{ $game->game_name }}</h2>
-                                        <div class="card-bottom">
+                                        <div class="card-bottom d-flex align-items-center justify-content-between">
                                             @foreach ($game->gameCategories as $category)
                                                 <a class="btn"
-                                                    href="@if ($logIn == 1 && (!empty($purchasePlanDetail))) {{ route('game', $game->game_file) }} @else # @endif"
+                                                    href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
                                                     style="text-transform: capitalize">{{ $category->categoryName->category_name }}</a>
                                             @endforeach
+                                            @if ($logIn == 0)
+                                                <span class="favorite_icon" data-toggle="modal" data-target="#login">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                            @else
+                                                <span class="favorite_icon fgame" id="favorite_icon" data-user="{{ $subscriber->id }}" data-id="{{ $game->id }}">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                            @endif
                                         </div>
                                     </div>
                                 </a>
@@ -128,27 +133,27 @@
                 </div>
                 <div class="row p-4">
                     @foreach ($allGames as $game)
-                    <div class="col-xl-3 col-lg-4 col-md-4 col-6 card exgame__item" data-aos="zoom-in-up">
-                        <div class="card-hover border-rad">
-                            <a href="@if ($logIn == 1 && (!empty($purchasePlanDetail))) {{ route('game', $game->game_file) }} @else # @endif"
-                                class="game-btn" target="_blank"
-                                @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
-                                <img class="card-img-top"
-                                    src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
-                                    alt="{{ $game->game_name }}">
-                                <div class="card-body">
-                                    <h2 class="card-title">{{ $game->game_name }}</h2>
-                                    <div class="card-bottom">
-                                        @foreach ($game->gameCategories as $category)
-                                            <a class="btn"
-                                                href="@if ($logIn == 1 && (!empty($purchasePlanDetail))) {{ route('game', $game->game_file) }} @else # @endif"
-                                                style="text-transform: capitalize">{{ $category->categoryName->category_name }}</a>
-                                        @endforeach
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-6 card exgame__item" data-aos="zoom-in-up">
+                            <div class="card-hover border-rad">
+                                <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
+                                    class="game-btn" target="_blank"
+                                    @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
+                                    <img class="card-img-top"
+                                        src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                        alt="{{ $game->game_name }}">
+                                    <div class="card-body">
+                                        <h2 class="card-title">{{ $game->game_name }}</h2>
+                                        <div class="card-bottom">
+                                            @foreach ($game->gameCategories as $category)
+                                                <a class="btn"
+                                                    href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
+                                                    style="text-transform: capitalize">{{ $category->categoryName->category_name }}</a>
+                                            @endforeach
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
             </div>
@@ -202,4 +207,31 @@
         </div>
     </section>
     <!-- ------------------------- Trailer & Gameplay Section End ---------------------- -->
+@endsection
+
+@section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tandg__item').magnificPopup({
+                type: 'iframe'
+            });
+        });
+        //----add favorite games
+        $('.fgame').click(function () { 
+            const game_id = $(this).data('id');
+            const user_id = $(this).data('user');
+            $.ajax({
+                type: 'POST',
+                url: '/game/favorite',
+                data: {
+                    game_id: game_id,
+                    user_id: user_id
+                },
+                success: function(response) {
+                    alert(response)
+                }
+            });
+        });
+    </script>
 @endsection

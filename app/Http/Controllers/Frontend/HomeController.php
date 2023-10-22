@@ -58,7 +58,7 @@ class HomeController extends Controller
         $multiPlayerGame = Game::where('is_free', 0)->where('is_exclusive', 0)->take(12)->get();
         $exclusiveGames = Game::where('is_free', 0)->where('is_exclusive', 1)->get();
         $allGames = Game::latest()->get();
-        return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail', 'allGames'));
+        return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail', 'allGames', 'subscriber'));
     }
     public function game(Request $request)
     {
