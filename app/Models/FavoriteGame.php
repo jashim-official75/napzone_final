@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class FavoriteGame extends Model
 {
     use HasFactory;
+
+    public function Game()
+    {
+        return $this->belongsTo(Game::class);
+    }
 }

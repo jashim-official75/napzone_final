@@ -21,4 +21,13 @@ class Game extends Model
     {
         return $this->hasMany(GameCategory::class);
     }
+
+    public function Subscriber()
+    {
+        return $this->hasMany(Subscriber::class);
+    }
+    public function FavoriteGame()
+    {
+        return $this->hasMany(FavoriteGame::class);
+    }
 }
