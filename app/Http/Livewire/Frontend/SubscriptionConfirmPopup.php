@@ -40,7 +40,6 @@ class SubscriptionConfirmPopup extends Component
             return redirect()->route('home')->with('error', 'Plan Subscription failed! Please try again.');
         }
     }
-
     public function render()
     {
         return view('livewire.frontend.subscription-confirm-popup');

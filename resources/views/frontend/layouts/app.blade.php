@@ -111,14 +111,14 @@
                 beforeResend.style.display = 'none'
             }, 60000);
         });
-        window.livewire.on('package', () => {
-            $('#subscription').modal('hide');
-            $('#subscriptionConfirm').modal('show');
-        });
         window.livewire.on('packageFinish', () => {
-            $('#subscriptionConfirm').modal('hide');
+            $('#subscription').modal('hide');
             $('#packageDone').modal('show');
         });
+        // window.livewire.on('packageFinish', () => {
+        //     $('#subscriptionConfirm').modal('hide');
+        //     $('#packageDone').modal('show');
+        // });
     </script>
 
 </body>

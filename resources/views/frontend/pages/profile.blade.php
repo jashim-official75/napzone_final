@@ -9,13 +9,12 @@
             @endif
             <div class="profile_header">
                 <h2>User Profile</h2>
-                <div class="unsubscribe">
-                    @if (!empty($purchasePlanDetail) && $logIn == 1)
+                @if (!empty($purchasePlanDetail) && $logIn == 1)
+                    <div class="unsubscribe">
                         <a href="#" class="unsubscribe_btn" type="button" data-toggle="modal"
                             data-target="#unsubscribe">Unsubscribe</a>
-                    @endif
-
-                </div>
+                    </div>
+                @endif
             </div>
             <form action="{{ route('user.profile.update', $subscriber->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf

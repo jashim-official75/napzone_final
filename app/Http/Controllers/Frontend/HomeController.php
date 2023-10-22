@@ -47,15 +47,18 @@ class HomeController extends Controller
                     $purchasePlanDetail = null;
                 } elseif ($result->result_code == 400) {
                     $purchasePlanDetail = null;
-                } elseif ($request->result_code == 0) {
+                } elseif ($result->result_code == 0) {
                     $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
+                }else{
+                    $purchasePlanDetail = null;
                 }
             }
         }
         $freeGames =  Game::where('is_free', 1)->where('is_exclusive', 0)->get();
-        $multiPlayerGame = Game::where('is_free', 0)->where('is_exclusive', 0)->get();
+        $multiPlayerGame = Game::where('is_free', 0)->where('is_exclusive', 0)->take(12)->get();
         $exclusiveGames = Game::where('is_free', 0)->where('is_exclusive', 1)->get();
-        return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail'));
+        $allGames = Game::latest()->get();
+        return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail', 'allGames'));
     }
     public function game(Request $request)
     {
@@ -65,7 +68,6 @@ class HomeController extends Controller
         } else {
             $logIn = 0;
         }
-
         // Check if user is subscribed or not.
         $subscriber = Subscriber::where('token', $accessor)->first();
         if ($subscriber) {
@@ -76,11 +78,9 @@ class HomeController extends Controller
         } else {
             $purchasePlanDetail = null;
         }
-
         $games = Game::all();
         return view('frontend.pages.searchGames', compact('games', 'logIn', 'purchasePlanDetail'));
     }
-
     public function privacyPolicy(Request $request)
     {
         $accessor = $request->session()->get('accessor');
@@ -89,10 +89,8 @@ class HomeController extends Controller
         } else {
             $logIn = 0;
         }
-
         return view('frontend.pages.privacy-policy', compact('logIn'));
     }
-
     public function tos(Request $request)
     {
         $accessor = $request->session()->get('accessor');
@@ -101,7 +99,6 @@ class HomeController extends Controller
         } else {
             $logIn = 0;
         }
-
         // Check if user is subscribed or not.
         $subscriber = Subscriber::where('token', $accessor)->first();
         if ($subscriber) {
@@ -112,10 +109,8 @@ class HomeController extends Controller
         } else {
             $purchasePlanDetail = null;
         }
-
         return view('frontend.pages.terms-condition', compact('logIn', 'purchasePlanDetail'));
     }
-
     public function faq(Request $request)
     {
         $accessor = $request->session()->get('accessor');

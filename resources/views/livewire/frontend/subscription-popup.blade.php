@@ -18,40 +18,33 @@
                                         day</span>
                                     <input type="radio" name="plan_name" value="daily" wire:model.lazy="package">
                                     <span class="checkmark"></span></label>
-                                    <p>Charges apply</p>
+                                <p>Charges apply</p>
                             </div>
                             <div class="package">
                                 <label class="container">25<small>TK</small><span class="pkg__duration">7
                                         days</span>
                                     <input type="radio" name="plan_name" value="weekly" wire:model.lazy="package">
                                     <span class="checkmark"></span></label>
-                                    <p>Charges apply</p>
+                                <p>Charges apply</p>
                             </div>
                             <div class="package">
                                 <label class="container">50<small>TK</small><span class="pkg__duration">30
                                         days</span>
                                     <input type="radio" name="plan_name" value="monthly" wire:model.lazy="package">
                                     <span class="checkmark"></span></label>
-                                    <p>Charges apply</p>
+                                <p>Charges apply</p>
                             </div>
                         </section>
                         <div id="bottomContents">
                             <span id="afterPackage_note">You will find amazing games to play !!</span>
-                           
-                                <div id="renewalCheckbox">
-                                    <label class="renewal">
-                                    
+                            <div id="renewalCheckbox">
+                                <label class="renewal">
                                     <div class="check_img">
-                                    <img class="img"
-                                            src="{{ asset('assets/frontend/img/r8-tick2.png') }}">
+                                        <img class="img" src="{{ asset('assets/frontend/img/r8-tick2.png') }}">
                                     </div>
                                     Autorenewal
-                                       
-    
-                                        
-                                    </label>
-                                </div>
-                          
+                                </label>
+                            </div>
                             <span id="beforeButton_note">You can play all the amazing games as long as <br> subscription
                                 active.</span>
                             <button type="submit">Proceed</button>

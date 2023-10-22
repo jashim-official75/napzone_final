@@ -47,7 +47,7 @@ class ProfileController extends Controller
                     $purchasePlanDetail = null;
                 } elseif ($result->result_code == 400) {
                     $purchasePlanDetail = null;
-                } elseif ($request->result_code == 0) {
+                } elseif ($result->result_code == 0) {
                     $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                 }
             }
