@@ -24,7 +24,6 @@
                 @if ($logIn == 0)
                     <div id="carouselContent">
                         <span class="carouselContent__heading">
-                       
                             <p id="title" class="dancing-in-text" style="animation-delay:500ms">Exclusive Games</p>
                         </span>
                         <span class="carouselContent__names">
