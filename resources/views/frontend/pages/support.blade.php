@@ -12,7 +12,7 @@
 @section('content')
     <!-- ------------------------- Top Action And Top Multiplayer Start ---------------------- -->
     <section id="supportZone">
-        <p id="title">NapZone Support Center</p>
+  
         <div class="supportZone__form">
             @if (@session('success'))
                 <h2 style="text-align: center; margin: 10px 0px;">Successfully submitted. We will reach you as soon as
@@ -20,6 +20,7 @@
             @else
 
                 <form action="{{ route('support.submit') }}" method="POST">
+                    <p id="title">NapZone Support Center</p>
                     @csrf
                     <label for="phonenumber"> Phone Number </label>
                     <div>

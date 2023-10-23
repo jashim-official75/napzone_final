@@ -1637,8 +1637,12 @@ label.renewal {
 }
 
 #supportZone {
-  margin: 15rem 0rem 0;
+  margin: 5rem 0rem 0;
   height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 700px;
 }
 
 #supportZone p#title {
