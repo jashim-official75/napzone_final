@@ -164,7 +164,7 @@
 .profile_icon {
   position: relative;
   color: #f2b705;
-  margin-left: 1rem;
+  margin-left: 2rem;
   height: 80px;
   display: flex;
   align-items: center;
@@ -418,9 +418,13 @@ body {
 }
 header#header {
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 2000;
+    transition: transform 0.3s ease-in-out
 }
+
+
 #header .logo{
   width: 80%;
 }
@@ -610,7 +614,7 @@ header#header {
 }
 
 .navbar .form-inline input {
-    padding: 11px 20px;
+    padding: 10px 20px;
     margin-right: 0px !important;
 }
 .navbar .navbar-toggler i {
@@ -628,7 +632,7 @@ header#header {
 
 .search-button {
     width: 60px;
-    padding: 6px 6px;
+    padding: 5px 6px;
     border: 1px solid #f2b705;
     background: #f2b705;
     text-align: center;
