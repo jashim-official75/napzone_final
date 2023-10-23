@@ -5,7 +5,7 @@
                 <div class="footer__firstc">
                     <h2>Quick Links</h2>
                     <h4><a href="{{ route('home') }}">Home</a></h4>
-                    <h4><a href="{{ route('games') }}">Games</a></h4>
+                    <h4><a href="{{ route('home') }}">Games</a></h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">

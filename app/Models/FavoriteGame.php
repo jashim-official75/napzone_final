@@ -9,7 +9,7 @@ class FavoriteGame extends Model
 {
     use HasFactory;
 
-    public function Game()
+    public function game()
     {
         return $this->belongsTo(Game::class);
     }

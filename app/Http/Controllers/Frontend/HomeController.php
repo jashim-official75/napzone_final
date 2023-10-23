@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\FavoriteGame;
 use App\Models\Game;
 use App\Models\PurchasePlan;
 use App\Models\Subscriber;
@@ -50,15 +51,19 @@ class HomeController extends Controller
                 } elseif ($result->result_code == 0) {
                     $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                 }else{
-                    $purchasePlanDetail = null;
+                    $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                 }
             }
         }
+        $favorite_games = null;
         $freeGames =  Game::where('is_free', 1)->where('is_exclusive', 0)->get();
         $multiPlayerGame = Game::where('is_free', 0)->where('is_exclusive', 0)->take(12)->get();
-        $exclusiveGames = Game::where('is_free', 0)->with('FavoriteGame')->where('is_exclusive', 1)->get();
-        $allGames = Game::latest()->get();
-        return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail', 'allGames', 'subscriber'));
+        $exclusiveGames = Game::where('is_free', 0)->with('FavoriteGame', 'gameCategories')->where('is_exclusive', 1)->get();
+        if($subscriber){
+            $favorite_games = FavoriteGame::where('subscriber_id', $subscriber->id)->with('game')->take(6)->get();
+        }
+        $allGames = Game::latest()->with('FavoriteGame')->get();
+        return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail', 'allGames', 'subscriber', 'favorite_games'));
     }
     public function game(Request $request)
     {
