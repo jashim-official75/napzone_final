@@ -27,8 +27,8 @@
                     </ul>
                 </div>
             @else
-                <a href="#" class="btn btn__primary ml-5 my-2 my-sm-0" type="button" data-toggle="modal"
-                    data-target="#login">Log In</a>
+                <a href="#" class="btn btn__primary ml-5 my-2 my-sm-0 py-2" type="button" data-toggle="modal"
+                    data-target="#login">LogIn</a>
             @endif
         </div>
 

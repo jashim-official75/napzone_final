@@ -8488,3 +8488,543 @@ Did you mean one of these?
 #57 D:\\laragon\\www\\napzone_final\\server.php(21): require_once('D:\\\\laragon\\\\www\\\\...')
 #58 {main}
 "} 
+[2023-10-23 14:49:22] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'napzone_final.favorite_games' doesn't exist (SQL: select * from `favorite_games` where `favorite_games`.`game_id` in (34, 35, 36, 37, 38, 39, 40, 41, 46, 47, 48, 50)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'napzone_final.favorite_games' doesn't exist (SQL: select * from `favorite_games` where `favorite_games`.`game_id` in (34, 35, 36, 37, 38, 39, 40, 41, 46, 47, 48, 50)) at C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(625): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(609): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(195): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(160): Illuminate\\Database\\Eloquent\\Relations\\Relation->get()
+#10 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(673): Illuminate\\Database\\Eloquent\\Relations\\Relation->getEager()
+#11 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(642): Illuminate\\Database\\Eloquent\\Builder->eagerLoadRelation(Array, 'FavoriteGame', Object(Closure))
+#12 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(610): Illuminate\\Database\\Eloquent\\Builder->eagerLoadRelations(Array)
+#13 C:\\laragon\\www\
+apzone-final_2\\app\\Http\\Controllers\\Frontend\\HomeController.php(59): Illuminate\\Database\\Eloquent\\Builder->get()
+#14 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Frontend\\HomeController->home(Object(Illuminate\\Http\\Request))
+#15 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('home', Array)
+#16 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Frontend\\HomeController), 'home')
+#17 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#18 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
+#19 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#28 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#36 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#37 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\
+apzone-final_2\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\laragon\\www\
+apzone-final_2\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#58 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#59 C:\\laragon\\www\
+apzone-final_2\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#60 C:\\laragon\\www\
+apzone-final_2\\server.php(21): require_once('C:\\\\laragon\\\\www\\\\...')
+#61 {main}
+
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'napzone_final.favorite_games' doesn't exist at C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:359)
+[stacktrace]
+#0 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): PDO->prepare('select * from `...')
+#1 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#2 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#5 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(625): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(609): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#10 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(195): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#11 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php(160): Illuminate\\Database\\Eloquent\\Relations\\Relation->get()
+#12 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(673): Illuminate\\Database\\Eloquent\\Relations\\Relation->getEager()
+#13 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(642): Illuminate\\Database\\Eloquent\\Builder->eagerLoadRelation(Array, 'FavoriteGame', Object(Closure))
+#14 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(610): Illuminate\\Database\\Eloquent\\Builder->eagerLoadRelations(Array)
+#15 C:\\laragon\\www\
+apzone-final_2\\app\\Http\\Controllers\\Frontend\\HomeController.php(59): Illuminate\\Database\\Eloquent\\Builder->get()
+#16 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Frontend\\HomeController->home(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('home', Array)
+#18 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Frontend\\HomeController), 'home')
+#19 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#20 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
+#21 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#30 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#39 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#41 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\laragon\\www\
+apzone-final_2\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\laragon\\www\
+apzone-final_2\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#60 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#61 C:\\laragon\\www\
+apzone-final_2\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#62 C:\\laragon\\www\
+apzone-final_2\\server.php(21): require_once('C:\\\\laragon\\\\www\\\\...')
+#63 {main}
+"} 
+[2023-10-23 14:50:15] local.ERROR: File does not exist at path C:\laragon\www\napzone-final_2//database/migrations/fileName.php. {"exception":"[object] (Illuminate\\Contracts\\Filesystem\\FileNotFoundException(code: 0): File does not exist at path C:\\laragon\\www\
+apzone-final_2//database/migrations/fileName.php. at C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php:136)
+[stacktrace]
+#0 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(526): Illuminate\\Filesystem\\Filesystem->requireOnce('C:\\\\laragon\\\\www\\\\...')
+#1 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(105): Illuminate\\Database\\Migrations\\Migrator->requireFiles(Array)
+#2 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(85): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#3 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#4 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#5 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#6 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#11 C:\\laragon\\www\
+apzone-final_2\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#12 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#13 C:\\laragon\\www\
+apzone-final_2\\vendor\\symfony\\console\\Application.php(1005): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\laragon\\www\
+apzone-final_2\\vendor\\symfony\\console\\Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\laragon\\www\
+apzone-final_2\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\laragon\\www\
+apzone-final_2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 {main}
+"} 
+[2023-10-23 14:59:16] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list' (SQL: update `subscribers` set `name` = ?, `subscribers`.`updated_at` = 2023-10-23 14:59:16 where `id` = 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list' (SQL: update `subscribers` set `name` = ?, `subscribers`.`updated_at` = 2023-10-23 14:59:16 where `id` = 1) at C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('update `subscri...', Array, Object(Closure))
+#1 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(524): Illuminate\\Database\\Connection->run('update `subscri...', Array, Object(Closure))
+#2 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(457): Illuminate\\Database\\Connection->affectingStatement('update `subscri...', Array)
+#3 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3001): Illuminate\\Database\\Connection->update('update `subscri...', Array)
+#4 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(919): Illuminate\\Database\\Query\\Builder->update(Array)
+#5 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1072): Illuminate\\Database\\Eloquent\\Builder->update(Array)
+#6 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(987): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(Illuminate\\Database\\Eloquent\\Builder))
+#7 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(885): Illuminate\\Database\\Eloquent\\Model->save(Array)
+#8 C:\\laragon\\www\
+apzone-final_2\\app\\Http\\Controllers\\Frontend\\ProfileController.php(62): Illuminate\\Database\\Eloquent\\Model->update(Array)
+#9 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Frontend\\ProfileController->profile_update(Object(Illuminate\\Http\\Request), '1')
+#10 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('profile_update', Array)
+#11 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Frontend\\ProfileController), 'profile_update')
+#12 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#13 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
+#14 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#23 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#30 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#31 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#32 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#33 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#34 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\
+apzone-final_2\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\laragon\\www\
+apzone-final_2\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#53 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\
+apzone-final_2\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#55 C:\\laragon\\www\
+apzone-final_2\\server.php(21): require_once('C:\\\\laragon\\\\www\\\\...')
+#56 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list' at C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:513)
+[stacktrace]
+#0 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(513): PDO->prepare('update `subscri...')
+#1 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('update `subscri...', Array)
+#2 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('update `subscri...', Array, Object(Closure))
+#3 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(524): Illuminate\\Database\\Connection->run('update `subscri...', Array, Object(Closure))
+#4 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(457): Illuminate\\Database\\Connection->affectingStatement('update `subscri...', Array)
+#5 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3001): Illuminate\\Database\\Connection->update('update `subscri...', Array)
+#6 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(919): Illuminate\\Database\\Query\\Builder->update(Array)
+#7 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1072): Illuminate\\Database\\Eloquent\\Builder->update(Array)
+#8 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(987): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(885): Illuminate\\Database\\Eloquent\\Model->save(Array)
+#10 C:\\laragon\\www\
+apzone-final_2\\app\\Http\\Controllers\\Frontend\\ProfileController.php(62): Illuminate\\Database\\Eloquent\\Model->update(Array)
+#11 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\Frontend\\ProfileController->profile_update(Object(Illuminate\\Http\\Request), '1')
+#12 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('profile_update', Array)
+#13 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Frontend\\ProfileController), 'profile_update')
+#14 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#15 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Route->run()
+#16 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#25 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#32 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#33 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#34 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(167): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#36 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\
+apzone-final_2\\vendor\\livewire\\livewire\\src\\DisableBrowserCache.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Livewire\\DisableBrowserCache->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\
+apzone-final_2\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#55 C:\\laragon\\www\
+apzone-final_2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#56 C:\\laragon\\www\
+apzone-final_2\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\
+apzone-final_2\\server.php(21): require_once('C:\\\\laragon\\\\www\\\\...')
+#58 {main}
+"} 

@@ -50,7 +50,7 @@ class HomeController extends Controller
                 } elseif ($result->result_code == 0) {
                     $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                 }else{
-                    $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
+                    $purchasePlanDetail = null;
                 }
             }
         }

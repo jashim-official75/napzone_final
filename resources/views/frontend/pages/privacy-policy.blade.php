@@ -28,7 +28,7 @@
                     software products and
                     services that we operate and that relate to this Privacy Policy (collectively, our 'Services') are
                     managed and secured by NapZone Games.</p>
-                <h2 class="section__header--title ">Information obtained by us:</h2>
+                <h2 class="title ">Information obtained by us:</h2>
                 <p class="text-white">We gather information when you send it to us, when you interact with others, and
                     when you use the Products. We can also obtain information from other sources concerning you.
                     </br>
@@ -50,14 +50,14 @@
                     <li class="ml-5">Correspondence you are submitting to us.</li>
                 </ul>
                 <br><br>
-                <h2 class="section__header--title ">Communications among others:</h2>
+                <h2 class="title ">Communications among others:</h2>
                 <p class="text-white">When you communicate or exchange information with others via the Services,
                     including by uploading images or by communicating verbally or in written messages, we may access and
                     store the contents of those communications and relevant information, unless such access and storage are
                     prohibited by law. You consent to our collection, storing and release of such data and information that
                     you submit or receive in compliance with this Privacy Policy and the Terms of Service and the End User
                     License Agreement.</p>
-                <h2 class="section__header--title ">Usage of the Services:</h2>
+                <h2 class="title ">Usage of the Services:</h2>
                 <p class="text-white">We gather information when you use our Services, including your Internet Protocol
                     (IP) address and other identifiers assigned to your device and application when you use the Services,
                     browser type, browser version, browser language settings, operating system, device name and type, MAC
@@ -71,12 +71,12 @@
                     data. In accordance with your device permissions, we may collect or derive location information from
                     your device's GPS signal, Bluetooth connections, nearby WiFi networks, and similar device information.
                     We may also derive location from your IP address.</p>
-                <h2 class="section__header--title ">Information that we obtain from other sources:</h2>
+                <h2 class="title ">Information that we obtain from other sources:</h2>
                 <p class="text-white">We may receive information about you from publicly and commercially available
                     sources (as permitted by law), which may be combined with other information we receive from or about
                     you. We may also receive information from third-party social networking services when you or other users
                     choose to connect to these services.</p>
-                <h3 class="section__header--title ">How the information is used by us:</h3>
+                <h3 class="title ">How the information is used by us:</h3>
                 <p class="text-white">We can use, record, systematize, store, update or alter, retrieve, remove or
                     otherwise process your information for the following purposes by way of manual or automated means:</p>
                 <p class="text-white">Our payment processors use payment details when appropriate for the execution of
@@ -110,7 +110,7 @@
                         eventually revoked at any time by contacting us, without compromising the legality of the processing
                         on the basis of consent prior to its removal.</li>
                 </ul>
-                <h2 class="section__header--title">Exchange of information:</h2>
+                <h2 class="title">Exchange of information:</h2>
                 <p class="text-white">We subject ourselves to the following situations as we share the details we
                     collect:</p>
                 <h3 class="sub-sub-heading">Business Associates:</h3>

@@ -15,7 +15,7 @@
                             aria-describedby="emailHelp" placeholder="Your TeleTalk Number"
                             wire:model.lazy='phoneNumber'>
                     </div>
-                    <button type="submit" class="btn">Log In</button>
+                    <button type="submit" class="btn">LogIn</button>
                 </form>
                 <div class="form-container__option">
                     <span>

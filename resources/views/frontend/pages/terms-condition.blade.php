@@ -23,7 +23,7 @@
     <section id="taandtm" class="section">
         <div class="container">
             <div class="row">
-                <h1 class="section__header--title">Terms and Conditions</h1>
+                <h1 class="title">Terms and Conditions</h1>
                 <p class="text-white">The Terms and Conditions of Service and the End User License Agreement is an
                     agreement between you and NapZone Games. This controls your access and use of the websites, games, and
                     other interactive software products and services that we run and that link to these Terms (collectively,

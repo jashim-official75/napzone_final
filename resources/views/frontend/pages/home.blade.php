@@ -24,13 +24,15 @@
                 @if ($logIn == 0)
                     <div id="carouselContent">
                         <span class="carouselContent__heading">
-                            <span class="bounce-in-text">
-                                <span id="secondText">Subscribe Now</span>
-                            </span>
+                       
                             <p id="title" class="dancing-in-text" style="animation-delay:500ms">Exclusive Games</p>
                         </span>
                         <span class="carouselContent__names">
                             <p>Subscribe now and get access to exclusive games.</p>
+                        </span>
+                        <span class="bounce-in-text mt-4">
+                            <a href="#" class="btn__primary" data-toggle="modal"
+                            data-target="#login">LogIn Now</a>
                         </span>
                     </div>
                 @else
@@ -40,18 +42,22 @@
                                 <p id="title" class="dancing-in-text" style="animation-delay:500ms">Exclusive Games</p>
                                 <p>You Can Access Any Where & Any Device</p>
                                 <p>Enjoy Ad Free Games</p>
+                                <span class="bounce-in-text mt-4">
+                                    <a href="#exgame" class="btn__primary">Play Now</a>
+                                </span>
                             </span>
                         </div>
                     @else
                         <div id="carouselContent">
                             <span class="carouselContent__heading">
-                                <span class="bounce-in-text">
-                                    <span id="secondText">Subscribe Now</span>
-                                </span>
                                 <p id="title" class="dancing-in-text" style="animation-delay:500ms">Exclusive Games</p>
                             </span>
                             <span class="carouselContent__names">
                                 <p>Subscribe now and get access to exclusive games.</p>
+                            </span>
+                            <span class="bounce-in-text mt-4">
+                                <a href="#" class="btn__primary" data-toggle="modal"
+                                data-target="#login">Subscribe Now</a>
                             </span>
                         </div>
                     @endif
@@ -69,8 +75,8 @@
                 <div class="row justify-content-between">
                     <div class="col-lg-12 col-md-12  taandtm__rr--items">
                         <div class="row">
-                            <div class="col-12 mb-5">
-                                <h2 class="section__header--title pt-0" data-aos="fade-left">Popular Games</h2>
+                            <div class="col-12 mb-4">
+                                <h2 class="section__header--title pt-0" data-aos="fade-left"> <span><i class="fas fa-users"></i></span> Popular Games</h2>
                             </div>
                             @foreach ($multiPlayerGame as $game)
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-6 taandtm__rr--item" data-aos="zoom-in-up">
@@ -99,7 +105,7 @@
                     <div class="col-lg-12 col-md-12  taandtm__rr--items">
                         <div class="row">
                             <div class="col-12 mb-5">
-                                <h2 class="section__header--title pt-0" data-aos="fade-left">Favorite Games</h2>
+                                <h2 class="section__header--title pt-0" data-aos="fade-left"> <span><i class="fas fa-heart"></i></span> Favourite Games</h2>
                             </div>
                             @foreach ($multiPlayerGame as $game)
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-6 taandtm__rr--item" data-aos="zoom-in-up">
@@ -126,9 +132,9 @@
         <!-- ------------------------- Exgame Section Start ---------------------- -->
         <section id="exgame" class="section">
             <div class="container bg-color">
-                <div class="row section__header text-center">
+                <div class="row section__header">
                     <div class="col-12 ">
-                        <h2 class="section__header--title pt-5" data-aos="fade-left">Exclusive Games!!</h2>
+                        <h2 class="section__header--title pt-5" data-aos="fade-left"> <span><i class="fas fa-crown"></i></span> Exclusive Games</h2>
                     </div>
                 </div>
                 <div class="row p-4">
@@ -180,9 +186,9 @@
         <!-- ------------------------- all games Section Start ---------------------- -->
         <section id="exgame" class="section">
             <div class="container bg-color">
-                <div class="row section__header text-center">
+                <div class="row section__header">
                     <div class="col-12 ">
-                        <h2 class="section__header--title pt-5" data-aos="fade-left">All Games!!</h2>
+                        <h2 class="section__header--title pt-5" data-aos="fade-left"> <span><i class="fas fa-gamepad"></i></span> All Games</h2>
                     </div>
                 </div>
                 <div class="row p-4">
@@ -234,9 +240,9 @@
     <!-- ------------------------- Trailer & Gameplay Section Start ---------------------- -->
     <section id="tandg" class="section">
         <div class="container bg-color">
-            <div class="row section__header text-center">
+            <div class="row section__header ">
                 <div class="col-12 ">
-                    <h2 class="section__header--title pt-5" data-aos="fade-left">Trailer & Gameplay</h2>
+                    <h2 class="section__header--title pt-5" data-aos="fade-left"> <span><i class="fas fa-play-circle"></i></span> Trailer & Gameplay</h2>
                 </div>
             </div>
             <div class="container">
