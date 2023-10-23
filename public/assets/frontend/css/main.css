@@ -1636,22 +1636,21 @@ label.renewal {
   }
 }
 
-#supportZone{
-  margin: 3rem 0rem;
+#supportZone {
+  margin: 15rem 0rem 0;
+  height: 600px;
 }
 
 #supportZone p#title {
-  font-size: 24px;
+  font-size:clamp(1.6rem , 5vw , 2rem);
   text-align: center;
   color: white;
-  text-decoration: underline;
-  margin: 10px auto 20px;
+  margin: 10px auto 30px;
 }
 
 #supportZone .supportZone__form {
-  min-width: 630px;
-  width: 60%;
-  height: auto;
+  max-width: 600px;
+  width: 90%;
   margin: auto;
   color: white;
   border: 1px solid white;
@@ -1659,6 +1658,7 @@ label.renewal {
   background: #18212b;
   -webkit-box-shadow: 1px 0px 7px 0px;
           box-shadow: 1px 0px 7px 0px;
+          padding: 3rem;
 }
 
 #supportZone .supportZone__form form {
@@ -1677,19 +1677,30 @@ label.renewal {
 }
 
 #supportZone .supportZone__form form div input, #supportZone .supportZone__form form div textarea {
-  width: 450px;
   margin: 0 auto 15px;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+  width: 100%;
+  background: #fff2;
+  padding: 0.5rem 1rem;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #fff4;
+  color: #fff;
+  border-radius: 8px;
 }
 
 #supportZone .supportZone__form form div input:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.208);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.208);
+  color: #fff;
+  background-color: #fff4;
+  border-color: #fff6;
+ 
+}
+#supportZone .supportZone__form form div input::placeholder ,#supportZone .supportZone__form form div textarea::placeholder
+{
+  color: #fff8;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 #supportZone .supportZone__form form div button {
@@ -1707,23 +1718,20 @@ label.renewal {
 }
 
 #supportZone .supportZone__form form div#supportZone__form__prb_tab label {
-  margin: 10px auto;
   position: unset;
-  text-decoration: underline;
 }
 
 #supportZone .supportZone__form form div#supportZone__form__prb_tab #problemBox {
   margin: auto;
   height: 80px;
+  width: 100%;
 }
 
 #supportZone .supportZone__form form div#supportZone__form__prb_tab #problemBox:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.208);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.208);
+  color: #fff;
+  background-color: #fff4;
+  border-color: #fff6;
+
 }
 #supportZone p.error {
   text-decoration: none !important;
@@ -1735,10 +1743,6 @@ label.renewal {
 }
 
 #supportZone .supportZone__form form p {
-  text-align: center;
-  margin: 10px;
-  text-decoration: underline;
-  /* font-weight: bold; */
   font-size: 16px;
 }
 

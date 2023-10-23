@@ -21,9 +21,9 @@
 
                 <form action="{{ route('support.submit') }}" method="POST">
                     @csrf
-                    <p>Phone Number</p>
+                    <label for="phonenumber"> Phone Number </label>
                     <div>
-                        <input type="number" name="phone_num" class="@error('phone_num')is-invalid @enderror" id="name"
+                        <input type="number" name="phone_num" class="@error('phone_num')is-invalid @enderror" id="phonenumber"
                             placeholder="Enter your subscription number" style="padding-left: 10px"
                             value="{{ old('phone_num') }}">
                     </div>
@@ -32,7 +32,7 @@
                     @enderror
 
                     <div id="supportZone__form__prb_tab">
-                        <label for="name">Discribe the Problem </label>
+                        <label for="problemBox">Describe the Problem </label>
                         <textarea type="text" name="problem" id="problemBox" placeholder="Describe your problem..."
                             style="padding-left: 10px" value="{{ old('problem') }}"></textarea>
                     </div>
@@ -40,7 +40,7 @@
                         <p class='error' style="margin-top: 0px !important">{{ $message }}</p>
                     @enderror
                     <div>
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="btn__primary">Submit</button>
                     </div>
                 </form>
             @endif
