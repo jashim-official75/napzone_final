@@ -1691,7 +1691,7 @@ label.renewal {
   outline: 0;
   border-bottom: 1px solid #fff4;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 #supportZone .supportZone__form form div input:focus {
@@ -1710,10 +1710,12 @@ label.renewal {
 #supportZone .supportZone__form form div button {
   background: #f2b705;
   font-weight: bold;
-  padding: 2px 20px;
+  padding: 6px 20px;
   margin: 24px auto;
   border-radius: 5px;
   color: #152222;
+  cursor: pointer;
+  outline: none;
 }
 
 #supportZone .supportZone__form form div#supportZone__form__prb_tab {
