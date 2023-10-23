@@ -21,61 +21,107 @@
         </div>
         <div class="container">
             <div class="row">
-                <div id="carouselContent">
-                    <span class="carouselContent__heading">
-                        <span class="bounce-in-text">
-                            <p id="fastText">Subscribe</p>
-                            <p id="secondText">and play</p>
+                @if ($logIn == 0)
+                    <div id="carouselContent">
+                        <span class="carouselContent__heading">
+                            <span class="bounce-in-text">
+                                <span id="secondText">Subscribe Now</span>
+                            </span>
+                            <p id="title" class="dancing-in-text" style="animation-delay:500ms">Exclusive Games</p>
                         </span>
-                        <p id="title" class="dancing-in-text" style="animation-delay:500ms">Exclusive Games</p>
-                    </span>
-                    <span class="carouselContent__names">
-                        <p>Subscribe now and get access to exclusive games.</p>
-                        <p>You Can Access Any Where & Any Device</p>
-                        <p>Enjoy Ad Free Games</p>
-                    </span>
-                </div>
+                        <span class="carouselContent__names">
+                            <p>Subscribe now and get access to exclusive games.</p>
+                        </span>
+                    </div>
+                @else
+                    @if (!empty($purchasePlanDetail))
+                        <div id="carouselContent">
+                            <span class="carouselContent__heading">
+                                <p id="title" class="dancing-in-text" style="animation-delay:500ms">Exclusive Games</p>
+                                <p>You Can Access Any Where & Any Device</p>
+                                <p>Enjoy Ad Free Games</p>
+                            </span>
+                        </div>
+                    @else
+                        <div id="carouselContent">
+                            <span class="carouselContent__heading">
+                                <span class="bounce-in-text">
+                                    <span id="secondText">Subscribe Now</span>
+                                </span>
+                                <p id="title" class="dancing-in-text" style="animation-delay:500ms">Exclusive Games</p>
+                            </span>
+                            <span class="carouselContent__names">
+                                <p>Subscribe now and get access to exclusive games.</p>
+                            </span>
+                        </div>
+                    @endif
+                @endif
             </div>
         </div>
 
     </div>
     <!-- -----------------------------------------slider end------------------------- -->
 
-
-    <!-- ------------------------- Hero Section Start ---------------------- -->
-    <!-- ------------------------- Hero Section End ---------------------- -->
-
     <!-- ------------------------- Top Action And Top Multiplayer Start ---------------------- -->
-    <section id="taandtm" class="section">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-12 col-md-12  taandtm__rr--items">
-                    <div class="row">
-                        <div class="col-12 mb-5">
-                            <h2 class="section__header--title pt-0" data-aos="fade-left">Popular Games</h2>
-                        </div>
-                        @foreach ($multiPlayerGame as $game)
-                            <div class="col-xl-2 col-lg-3 col-md-4 col-6 taandtm__rr--item" data-aos="zoom-in-up">
-                                <div class="card-hover">
-                                    <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
-                                        target="_blank"
-                                        @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
-                                        <img class="taandtm__rr--img"
-                                            src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
-                                            alt="{{ $game->game_name }}">
-                                        <h3 class="taandtm__rr--title">{{ $game->game_name }}</h3>
-                                    </a>
-                                </div>
+    @if (empty($purchasePlanDetail))
+        <section id="taandtm" class="section">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-12 col-md-12  taandtm__rr--items">
+                        <div class="row">
+                            <div class="col-12 mb-5">
+                                <h2 class="section__header--title pt-0" data-aos="fade-left">Popular Games</h2>
                             </div>
-                        @endforeach
+                            @foreach ($multiPlayerGame as $game)
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-6 taandtm__rr--item" data-aos="zoom-in-up">
+                                    <div class="card-hover">
+                                        <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
+                                            target="_blank"
+                                            @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
+                                            <img class="taandtm__rr--img"
+                                                src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                                alt="{{ $game->game_name }}">
+                                            <h3 class="taandtm__rr--title">{{ $game->game_name }}</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    @else
+        <section id="taandtm" class="section">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-12 col-md-12  taandtm__rr--items">
+                        <div class="row">
+                            <div class="col-12 mb-5">
+                                <h2 class="section__header--title pt-0" data-aos="fade-left">Favorite Games</h2>
+                            </div>
+                            @foreach ($multiPlayerGame as $game)
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-6 taandtm__rr--item" data-aos="zoom-in-up">
+                                    <div class="card-hover">
+                                        <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
+                                            target="_blank"
+                                            @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
+                                            <img class="taandtm__rr--img"
+                                                src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                                alt="{{ $game->game_name }}">
+                                            <h3 class="taandtm__rr--title">{{ $game->game_name }}</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
     <!-- ------------------------- Top Action And Top Multiplayer End ---------------------- -->
-
     @if (empty($purchasePlanDetail))
         <!-- ------------------------- Exgame Section Start ---------------------- -->
         <section id="exgame" class="section">
@@ -108,9 +154,17 @@
                                                     <i class="fas fa-heart"></i>
                                                 </span>
                                             @else
-                                                <span class="favorite_icon fgame" id="favorite_icon" data-user="{{ $subscriber->id }}" data-id="{{ $game->id }}">
-                                                    <i class="fas fa-heart"></i>
-                                                </span>
+                                                @if (!empty($purchasePlanDetail))
+                                                    <span class="favorite_icon fgame" id="favorite_icon"
+                                                        data-user="{{ $subscriber->id }}" data-id="{{ $game->id }}">
+                                                        <i class="fas fa-heart"></i>
+                                                    </span>
+                                                @else
+                                                    <span class="favorite_icon" data-toggle="modal"
+                                                        data-target="#subscription">
+                                                        <i class="fas fa-heart"></i>
+                                                    </span>
+                                                @endif
                                             @endif
                                         </div>
                                     </div>
@@ -143,12 +197,29 @@
                                         alt="{{ $game->game_name }}">
                                     <div class="card-body">
                                         <h2 class="card-title">{{ $game->game_name }}</h2>
-                                        <div class="card-bottom">
+                                        <div class="card-bottom d-flex align-items-center justify-content-between">
                                             @foreach ($game->gameCategories as $category)
                                                 <a class="btn"
                                                     href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
                                                     style="text-transform: capitalize">{{ $category->categoryName->category_name }}</a>
                                             @endforeach
+                                            @if ($logIn == 0)
+                                                <span class="favorite_icon" data-toggle="modal" data-target="#login">
+                                                    <i class="fas fa-heart"></i>
+                                                </span>
+                                            @else
+                                                @if (!empty($purchasePlanDetail))
+                                                    <span class="favorite_icon fgame" id="favorite_icon"
+                                                        data-user="{{ $subscriber->id }}" data-id="{{ $game->id }}">
+                                                        <i class="fas fa-heart"></i>
+                                                    </span>
+                                                @else
+                                                    <span class="favorite_icon" data-toggle="modal"
+                                                        data-target="#subscription">
+                                                        <i class="fas fa-heart"></i>
+                                                    </span>
+                                                @endif
+                                            @endif
                                         </div>
                                     </div>
                                 </a>
@@ -218,7 +289,7 @@
             });
         });
         //----add favorite games
-        $('.fgame').click(function () { 
+        $('.fgame').click(function() {
             const game_id = $(this).data('id');
             const user_id = $(this).data('user');
             $.ajax({

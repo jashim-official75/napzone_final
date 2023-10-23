@@ -16,6 +16,7 @@ class FavoriteGameController extends Controller
         $same_game = FavoriteGame::where('subscriber_id', $user_id)->where('game_id', $game_id)->first();
         if($same_game){
             $same_game->delete();
+            return response()->json('Favorite Game Remove Successfully.');
         }else{
             $favoriteGame = new FavoriteGame();
             $favoriteGame->subscriber_id = $user_id;

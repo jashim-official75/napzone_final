@@ -50,13 +50,13 @@ class HomeController extends Controller
                 } elseif ($result->result_code == 0) {
                     $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                 }else{
-                    $purchasePlanDetail = null;
+                    $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                 }
             }
         }
         $freeGames =  Game::where('is_free', 1)->where('is_exclusive', 0)->get();
         $multiPlayerGame = Game::where('is_free', 0)->where('is_exclusive', 0)->take(12)->get();
-        $exclusiveGames = Game::where('is_free', 0)->where('is_exclusive', 1)->get();
+        $exclusiveGames = Game::where('is_free', 0)->with('FavoriteGame')->where('is_exclusive', 1)->get();
         $allGames = Game::latest()->get();
         return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail', 'allGames', 'subscriber'));
     }
