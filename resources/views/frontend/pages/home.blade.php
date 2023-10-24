@@ -54,7 +54,7 @@
                                 <p>Subscribe now and get access to exclusive games.</p>
                             </span>
                             <span class="bounce-in-text mt-4">
-                                <a href="#" class="btn__primary" data-toggle="modal" data-target="#login">Subscribe
+                                <a href="#" class="btn__primary" data-toggle="modal" data-target="#subscription">Subscribe
                                     Now</a>
                             </span>
                         </div>
@@ -225,12 +225,12 @@
                                                     $fGame = App\Models\FavoriteGame::where('subscriber_id', $subscriber->id)->where('game_id', $game->id)->first();
                                                 @endphp
                                                 @if ($fGame)
-                                                    <span class="favorite_icon fgame" id="favorite_icon"
+                                                    <span class="favorite_icon fgame" id="favorite_icon" title="remove favorite game"
                                                         data-user="{{ $subscriber->id }}" data-id="{{ $game->id }}">
                                                         <i class="fas fa-heart"></i>
                                                     </span>
                                                 @else
-                                                    <span class="favorite_icon fgame" id="favorite_icon"
+                                                    <span class="favorite_icon fgame" id="favorite_icon" title="add favorite game"
                                                         data-user="{{ $subscriber->id }}" data-id="{{ $game->id }}">
                                                         <i class="far fa-heart"></i>
                                                     </span>
@@ -302,7 +302,6 @@
     </section>
     <!-- ------------------------- Trailer & Gameplay Section End ---------------------- -->
 @endsection
-
 @section('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script>
