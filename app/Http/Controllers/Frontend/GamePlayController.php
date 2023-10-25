@@ -15,12 +15,9 @@ class GamePlayController extends Controller
     public function game(Request $request, $gameName)
     {
         $accessor = $request->session()->get('accessor');
-
         if ($accessor) {
-
             $subscriber = Subscriber::where('token', $accessor)->first();
             $game = Game::where('game_file', $gameName)->first();
-
             $response = Http::get('https://games.napzone.games/' . $gameName . '/', [
                 'token' => $accessor,
                 'subscriber_id' => $subscriber->id,
@@ -31,9 +28,8 @@ class GamePlayController extends Controller
             return redirect()->route('home');
         }
     }
-
     //---play
-    public function play(Request $request)
+    public function play(Request $request, $gameName)
     {
         $accessor = $request->session()->get('accessor');
         $subscriber = Subscriber::where('token', $accessor)->first();
@@ -64,18 +60,23 @@ class GamePlayController extends Controller
                 ]);
                 // dd(json_decode($response));
                 $result = json_decode($response);
-                if ($result == null) {
-                    $purchasePlanDetail = null;
-                } elseif ($result->result_code == 400) {
-                    $purchasePlanDetail = null;
-                } elseif ($result->result_code == 0) {
+                if ($result->result_code == 200) {
                     $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
-                }else{
-                    $purchasePlanDetail = null;
+                    $allGames = Game::inRandomOrder()->get();
+                    $game = Game::where('game_file', $gameName)->first();
+                    return view('frontend.pages.game.play', compact('subscriber', 'logIn', 'purchasePlanDetail', 'allGames', 'game'));
+                } elseif ($result->result_code == 400) {
+                    return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Subscribe Now!');
+                } elseif ($result == null) {
+                    return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Subscribe Now!');
+                } else {
+                    return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Subscribe Now!');
                 }
+            } else {
+                return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Subscribe Now!');
             }
+        } else {
+            return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Login In First!');
         }
-        $allGames = Game::latest()->with('FavoriteGame')->get();
-        return view('frontend.pages.game.play', compact('subscriber', 'logIn', 'purchasePlanDetail','allGames'));
     }
 }

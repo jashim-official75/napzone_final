@@ -29,8 +29,8 @@ Route::post('/profile/{id}', [ProfileController::class, 'profile_update'])->name
 Route::get('/search', [SearchAndCategoryController::class, 'search'])->name('search');
 Route::get('/category/{categoryName}', [SearchAndCategoryController::class, 'category'])->name('category');
 Route::get('/game/{categoryName}', [SearchAndCategoryController::class, 'category'])->name('category');
-Route::get('/games/{gameName}/play', [GamePlayController::class, 'game'])->name('game');
-Route::get('/game_play', [GamePlayController::class, 'play'])->name('game.play');
+Route::get('/games/{gameName}/play', [GamePlayController::class, 'play'])->name('game.play');
+Route::get('/game_play/{gameName}', [GamePlayController::class, 'game'])->name('game');
 Route::post('/game/favorite', [FavoriteGameController::class, 'favorite_game']);
 Route::get('/ip',function(){
     // echo $_SERVER['SERVER_ADDR'];
