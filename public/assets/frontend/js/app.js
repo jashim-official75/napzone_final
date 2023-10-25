@@ -1,3 +1,4 @@
+
 let prevScrollPos = window.pageYOffset;
 const header = document.getElementById("header");
 

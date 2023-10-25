@@ -75,6 +75,7 @@ class GamePlayController extends Controller
                 }
             }
         }
-        return view('frontend.pages.game.play', compact('subscriber', 'logIn', 'purchasePlanDetail'));
+        $allGames = Game::latest()->with('FavoriteGame')->get();
+        return view('frontend.pages.game.play', compact('subscriber', 'logIn', 'purchasePlanDetail','allGames'));
     }
 }
