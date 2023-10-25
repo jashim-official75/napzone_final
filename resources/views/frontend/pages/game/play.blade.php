@@ -4,7 +4,7 @@
 @section('content')
     <section class="gamePlay">
         <div class="gamePlayscreen">
-            <iframe src="{{ route('game', $game->game_file) }}" frameborder="0" height="100%" width="100%"
+            <iframe src="{{ asset('AllGames/'.$game->game_file) }}" frameborder="0" height="100%" width="100%"
                 id="gameframe"></iframe>
             <div class="gameBottom">
                 <a href="#" class="gameName" title="Game Name">{{ $game->game_name }}</a>
@@ -60,7 +60,7 @@
                                 class="game-btn"
                                 @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                 <img class="card-img-top"
-                                    src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                    src="{{ asset($game->game_thumbnail) }}"
                                     alt="{{ $game->game_name }}">
                             </a>
                             <div class="card-body">

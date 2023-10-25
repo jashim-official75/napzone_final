@@ -84,7 +84,7 @@
                                         <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
                                             @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                             <img class="taandtm__rr--img"
-                                                src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                                src="{{ asset($game->game_thumbnail) }}"
                                                 alt="{{ $game->game_name }}">
                                             <h3 class="taandtm__rr--title">{{ $game->game_name }}</h3>
                                         </a>
@@ -114,7 +114,7 @@
                                             <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game.play', $game->game->game_file) }} @else # @endif"
                                                 @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                                 <img class="taandtm__rr--img"
-                                                    src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game->game_thumbnail) }}"
+                                                    src="{{ asset($game->game->game_thumbnail) }}"
                                                     alt="{{ $game->game->game_name }}">
                                                 <h3 class="taandtm__rr--title">{{ $game->game->game_name }}</h3>
                                             </a>
@@ -147,7 +147,7 @@
                                     class="game-btn"
                                     @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                     <img class="card-img-top"
-                                        src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                        src="{{ asset($game->game_thumbnail) }}"
                                         alt="{{ $game->game_name }}">
 
                                 </a>
@@ -203,7 +203,7 @@
                                     class="game-btn"
                                     @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                     <img class="card-img-top"
-                                        src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                        src="{{ asset($game->game_thumbnail) }}"
                                         alt="{{ $game->game_name }}">
                                 </a>
                                 <div class="card-body">

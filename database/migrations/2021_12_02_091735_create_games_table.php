@@ -18,7 +18,11 @@ class CreateGamesTable extends Migration
             $table->string('game_name')->unique();
             $table->string('game_thumbnail')->unique();
             $table->string('game_file')->unique();
-            $table->integer('is_free')->default(1);
+            $table->string('zip')->nullable();
+            $table->longText('description')->nullable();
+            $table->longText('meta_title')->nullable();
+            $table->longText('meta_keyword')->nullable();
+            $table->longText('meta_description')->nullable();
             $table->integer('is_exclusive')->default(1);
             $table->timestamps();
         });
