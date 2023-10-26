@@ -69,6 +69,7 @@ class GamePlayController extends Controller
                         $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                         $allGames = Game::inRandomOrder()->get();
                         $game = Game::where('game_file', $gameName)->first();
+                        $game->update(['total_play' => $game->total_play + 1]);
                         return view('frontend.pages.game.play', compact('subscriber', 'logIn', 'purchasePlanDetail', 'allGames', 'game'));
                     }
                     if ($mobile) {
