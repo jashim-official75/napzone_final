@@ -62,35 +62,33 @@ class GamePlayController extends Controller
                 // dd(json_decode($response));
                 $result = json_decode($response);
                 if ($result->result_code == 200) {
-                    $agent = new Agent();
-                    $mobile = $agent->isMobile();
-                    $desktop = $agent->isDesktop();
-                    if ($desktop) {
-                        $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
-                        $allGames = Game::inRandomOrder()->get();
-                        $game = Game::where('game_file', $gameName)->first();
-                        $game->update(['total_play' => $game->total_play + 1]);
-                        return view('frontend.pages.game.play', compact('subscriber', 'logIn', 'purchasePlanDetail', 'allGames', 'game'));
-                    }
-                    if ($mobile) {
-                        $game = Game::where('game_file', $gameName)->first();
-                        return view('frontend.pages.game.mobileplay', compact('game'));
-                    }
-                    //--others device--
-                    $game = Game::where('game_file', $gameName)->first();
-                    return view('frontend.pages.game.mobileplay', compact('game'));
+                    $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                 } elseif ($result->result_code == 400) {
-                    return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Subscribe Now!');
+                    $purchasePlanDetail = null;
                 } elseif ($result == null) {
-                    return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Subscribe Now!');
+                    $purchasePlanDetail = null;
                 } else {
-                    return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Subscribe Now!');
+                    $purchasePlanDetail = null;
                 }
             } else {
-                return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Subscribe Now!');
+                $purchasePlanDetail = null;
             }
-        } else {
-            return redirect()->route('home')->with('error', 'You are Not Authorized This Page. Please Login In First!');
         }
+        $agent = new Agent();
+        $mobile = $agent->isMobile();
+        $desktop = $agent->isDesktop();
+        if ($desktop) {
+            $allGames = Game::inRandomOrder()->get();
+            $game = Game::where('game_file', $gameName)->first();
+            $game->update(['total_play' => $game->total_play + 1]);
+            return view('frontend.pages.game.play', compact('subscriber', 'logIn', 'purchasePlanDetail', 'allGames', 'game'));
+        }
+        if ($mobile) {
+            $game = Game::where('game_file', $gameName)->first();
+            return view('frontend.pages.game.mobileplay', compact('game'));
+        }
+        //--others device--
+        $game = Game::where('game_file', $gameName)->first();
+        return view('frontend.pages.game.mobileplay', compact('game'));
     }
 }

@@ -4,7 +4,7 @@
 @section('content')
     <section class="gamePlay">
         <div class="gamePlayscreen">
-            <iframe src="{{ asset('AllGames/'.$game->game_file) }}" frameborder="0" height="100%" width="100%"
+            <iframe src="{{ asset('AllGames/' . $game->game_file) }}" frameborder="0" height="100%" width="100%"
                 id="gameframe"></iframe>
             <div class="gameBottom">
                 <a href="#" class="gameName" title="Game Name">{{ $game->game_name }}</a>
@@ -60,8 +60,7 @@
                             <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game.play', $game->game_file) }} @else # @endif"
                                 class="game-btn"
                                 @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
-                                <img class="card-img-top"
-                                    src="{{ asset($game->game_thumbnail) }}"
+                                <img class="card-img-top" src="{{ asset($game->game_thumbnail) }}"
                                     alt="{{ $game->game_name }}">
                             </a>
                             <div class="card-body">
@@ -118,7 +117,6 @@
         function DesktopfullscreenIframe() {
             var iframe = document.querySelector('#gameframe');
             iframe.requestFullscreen();
-
         }
     </script>
 @endsection
