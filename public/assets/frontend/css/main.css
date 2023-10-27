@@ -513,14 +513,16 @@ body {
   width: 100%;
   z-index: 2000;
   transition: transform 0.3s ease-in-out;
-  padding: 0.2rem 3rem;
+  padding: 0rem 4rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: rgba(28 ,40, 51, 0.4);
-  border-bottom: 1px solid #fff4;
-  backdrop-filter: blur(7px);
+  background: rgba(28, 40 ,51,0.8);
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  height: 80px;
 }
+
 #header nav {
   display: flex;
   width: 100%;
