@@ -15,10 +15,10 @@ class SubscriptionController extends Controller
     {
         try {
 
-            // $clientIp = request()->getClientIp();
-            // $authorizedIp = '35.214.39.112';
+            $clientIp = request()->getClientIp();
+            $authorizedIp = '35.214.39.112';
 
-            // if ($clientIp == $authorizedIp) {
+            if ($clientIp == $authorizedIp) {
                 $startTime = $request->input('start_time');
                 $endTime = $request->input('end_time');
                 $msisdn = $request->input('msisdn');
@@ -49,12 +49,12 @@ class SubscriptionController extends Controller
                         'message' => 'User is already subscribed',
                     ], 200);
                 }
-            // } else {
-            //     return response()->json([
-            //         'status' => false,
-            //         'message' => "Ip:" . $clientIp .  " is not allowed",
-            //     ], 200);
-            // }
+            } else {
+                return response()->json([
+                    'status' => false,
+                    'message' => "Ip:" . $clientIp .  " is not allowed",
+                ], 200);
+            }
         } catch (\Exception $exception) {
             return response()->json([
                 'status' => false,
@@ -67,10 +67,10 @@ class SubscriptionController extends Controller
     {
         try {
 
-            // $clientIp = request()->getClientIp();
-            // $authorizedIp = '35.214.39.112';
+            $clientIp = request()->getClientIp();
+            $authorizedIp = '35.214.39.112';
 
-            // if ($clientIp == $authorizedIp) {
+            if ($clientIp == $authorizedIp) {
                 $startTime = $request->input('start_time');
                 $endTime = $request->input('end_time');
                 $msisdn = $request->input('msisdn');
@@ -114,11 +114,11 @@ class SubscriptionController extends Controller
                     'message' => "Ip:" . $clientIp .  " is not allowed",
                 ], 200);
             }
-        // } catch (\Exception $exception) {
-        //     return response()->json([
-        //         'status' => false,
-        //         'message' => $exception->getMessage(),
-        //     ], 400);
-        // }
+        } catch (\Exception $exception) {
+            return response()->json([
+                'status' => false,
+                'message' => $exception->getMessage(),
+            ], 400);
+        }
     }
 }

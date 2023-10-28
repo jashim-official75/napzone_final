@@ -1,3 +1,3 @@
 <footer class="footer">
-    © 2022 NapTechLabs LTD
+    © 2023 NapTechLabs LTD
 </footer>
