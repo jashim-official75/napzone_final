@@ -8,7 +8,8 @@
                 id="gameframe"></iframe>
             <div class="gameBottom">
                 <a href="#" class="gameName" title="Game Name">{{ $game->game_name }}</a>
-                <span class="gameTotalPlay">Total Play : {{ $game->total_play }}</span>
+                <span class="gameTotalPlay"> <img src="{{ asset('assets/frontend/img/gameplay.png') }}" alt=""
+                    >Total Play : {{ $game->total_play }}</span>
                 <div class="fullscreenBtn" title="Fullscreen">
                     <img src="{{ asset('assets/frontend/img/fullscreen.png') }}" alt=""
                         onclick="DesktopfullscreenIframe()">
