@@ -65,27 +65,6 @@ class HomeController extends Controller
         $allGames = Game::latest()->with('FavoriteGame')->get();
         return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail', 'allGames', 'subscriber', 'favorite_games'));
     }
-    public function game(Request $request)
-    {
-        $accessor = $request->session()->get('accessor');
-        if (Subscriber::where('token', $accessor)->count() > 0) {
-            $logIn = 1;
-        } else {
-            $logIn = 0;
-        }
-        // Check if user is subscribed or not.
-        $subscriber = Subscriber::where('token', $accessor)->first();
-        if ($subscriber) {
-            $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)
-                ->where('end_at', '>', Carbon::now())
-                ->latest()
-                ->first();
-        } else {
-            $purchasePlanDetail = null;
-        }
-        $games = Game::all();
-        return view('frontend.pages.searchGames', compact('games', 'logIn', 'purchasePlanDetail'));
-    }
     public function privacyPolicy(Request $request)
     {
         $accessor = $request->session()->get('accessor');

@@ -8,6 +8,7 @@ use App\Models\Game;
 use App\Models\GameCategory;
 use App\Models\Support;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use ZipArchive;
 
@@ -141,10 +142,13 @@ class GameController extends Controller
 
     public function destroy(Game $game)
     {
-        unlink(public_path('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail));
-
+        if($game->game_thumbnail){
+            File::delete(public_path($game->game_thumbnail));
+        }
+        if($game->zip){
+            File::deleteDirectory(public_path($game->zip));
+        }
         $game->delete();
-
-        return back()->with('delete', 'The post has been deleted successfully.');
+        return back()->with('delete', 'The Game has been deleted successfully.');
     }
 }
