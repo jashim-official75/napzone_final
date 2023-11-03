@@ -1,0 +1,36 @@
+{
+	"name": "Christmas Highway",
+	"short_name": "Christmas Highway",
+	"description": "The Christmas Highway Online Santa Clause game is a great way to get into the holiday spirit. This free game lets you control Santa Claus as he navigates his way through a winter wonderland. With stunning graphics and holiday music, this game is sure to get you into the Christmas spirit.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

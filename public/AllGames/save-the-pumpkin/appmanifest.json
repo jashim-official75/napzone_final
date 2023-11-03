@@ -1,0 +1,36 @@
+{
+	"name": "Save the Pumpkin",
+	"short_name": "Save the Pumpkin",
+	"description": "Save the Pumpkin is a fun Halloween adventure game in which you must save the pumpkin from spooky creatures. Are you ready for a Halloween adventure? In Save Pumpkin, you will embark on a spooky journey to rescue the pumpkin from evil creatures. Use your quick reflexes to dodge obstacles and defeat enemies in this exciting game. Save the Pumpkin is perfect for all ages and offers endless hours of fun. So, join the adventure today and become a pumpkin hero! Download now and experience the thrill of this fantastic game.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "any",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

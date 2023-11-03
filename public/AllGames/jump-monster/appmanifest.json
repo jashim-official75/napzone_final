@@ -1,0 +1,36 @@
+{
+	"name": "Jump Monster",
+	"short_name": "Jump Monster",
+	"description": "The \"Monster Jump Adventure Online Game\" is a fun and addicting game that allows players to experience the thrill of jumping and avoiding obstacles. The monster jump adventure online game is a great way for players to have fun and excitement. The game offers a unique and challenging gameplay that is different from other online games. The player can choose to play as a monster or a human in the game. There are many different levels to the game, and each level gets more difficult as the player progresses.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"name": "Fish Match Master",
+	"short_name": "Fish Match Master",
+	"description": "Looking for a fun and challenging match 3 puzzle game? Look no further than Fish Match Master. In this online game, you'll need to match three or more identical fish to clear them from the board. With each level, the challenge increases, so you'll need to be quick and strategic to progress. Can you become the ultimate Fish Match Master? Play now and find out!",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "any",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

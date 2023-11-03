@@ -1,0 +1,37 @@
+{
+	"name": "On The Away",
+	"short_name": "On The Away",
+	"description": "Become the trendy skater in town! On the away brings you the most fantastic skater game. No wait for a cracker of a game that will assure your time does not get wasted. Lots of obstacles to dodge and a BIG score to make!  Skating is in, and now you can get a taste of the skater stunt with this awesome game. As a skyline skater, you'll have to dodge lots of obstacles as you skate your way through levels while gathering points!",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#000000",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#ffffff"
+}

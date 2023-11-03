@@ -1,0 +1,36 @@
+{
+	"name": "Happy Color Sorting",
+	"short_name": "Happy Color Sorting",
+	"description": "The water sort puzzle is a happy, color-based online game that will challenge and engage you. The object of the game is to sort the different colors of water into their respective containers. This can be a difficult task, as the colors all look very similar. However, with a little careful planning and strategic thinking, you can complete the water sort puzzle and be happy with your results.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

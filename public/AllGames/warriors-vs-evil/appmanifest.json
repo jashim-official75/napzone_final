@@ -1,0 +1,36 @@
+{
+	"name": "Warriors VS Evil",
+	"short_name": "Warriors VS Evil",
+	"description": "The Warrior Kingdom is a fighting game where the warrior fights with the enemies to protect his Kingdom. He has very sharp skills that will help him win the battle and save his Kingdom. Because the player will play the role of a warrior and will be alone on the battlefield, he has a lot of responsibility on his shoulders. Use your skills and promptness to help the warrior save his Kingdom. ",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

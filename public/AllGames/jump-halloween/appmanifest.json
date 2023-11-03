@@ -1,0 +1,36 @@
+{
+	"name": "Jump Halloween",
+	"short_name": "Jump Halloween",
+	"description": "Halloween Games Online are the perfect way to get into the spirit of the season by playing some amazing Halloween games. Jump Halloween Online is a new and exciting online game that will have you on the edge of your seat! Exciting new jump halloween online games for kids! explore the world of fun and adventure with new and exciting games every day. stay safe and have a great time while playing our games! Packed with features and jump scares, Jump Halloween Online is the perfect game for anyone who loves the holiday season. Players can explore the creepy setting of a haunted house in this online game that's sure to make them scream. With new updates every week, Jump Halloween Online is sure to keep you entertained for weeks on end.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

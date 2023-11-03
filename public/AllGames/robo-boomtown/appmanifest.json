@@ -1,0 +1,36 @@
+{
+	"name": "Robo Boomtown",
+	"short_name": "Robo Boomtown",
+	"description": "Robo boomtown is a fun game to play. The game has a very simple gameplay where you have to collect power and keep the robot alive! But this is not that easy to keep him alive, there are bomb everywhere. Be aware of the bombs and try to dodge them all. If any of them fall on you the game will be over. You can use the arrow keys to play the game. ",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

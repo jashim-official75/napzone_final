@@ -1,0 +1,36 @@
+{
+	"name": "Hill Racing",
+	"short_name": "Hill Racing",
+	"description": "If you're looking for a racing game that does what it takes to be classic, Hill Racing! is the game for you. In Hill Racing, you race your way uphill towards the finish line with plenty of challenges in between! This physics-based game is perfect for those who love to race their cars, and we know how you feel: we've put together a full game cassette containing all the tools you need to drive these hills! The game features a variety of unique hill climbing environments, as well as different cars that can be upgraded with coins and tricks.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "any",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

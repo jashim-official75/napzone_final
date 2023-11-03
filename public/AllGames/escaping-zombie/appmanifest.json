@@ -1,0 +1,36 @@
+{
+	"name": "Escaping Zombie",
+	"short_name": "Escaping Zombie",
+	"description": "Get your heart pumping with the Escaping Zombie Online Jump Game! With just one click, you can start playing this addicting game. See how long you can last against the never-ending hordes of zombies. Can you make it to the top of the leaderboard? Play now and find out! Look no further than Escaping Zombie! In this thrilling game, you must guide your character through a city overrun by zombies, avoiding being caught and turned into one of them yourself. With exciting gameplay and hours of fun, Escaping Zombie is a must-play game for all fans of online gaming!",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

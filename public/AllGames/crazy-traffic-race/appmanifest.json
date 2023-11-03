@@ -1,0 +1,36 @@
+{
+	"name": "Crazy Traffic Racer",
+	"short_name": "Crazy Traffic Racer",
+	"description": "Traffic control is an online game in which you control traffic in the city. Keep traffic steady and avoid it. The faster you finish the level, the more points you earn. Maximize your score by carefully avoiding collisions. If you would like to play this game, then there are unique traffic control online games.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

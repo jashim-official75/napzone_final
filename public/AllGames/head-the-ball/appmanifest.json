@@ -1,0 +1,36 @@
+{
+	"name": "Head The Ball",
+	"short_name": "Head The Ball",
+	"description": "Head The Ball is a new way for soccer players to head the ball. By using your head, you can create an impact that is difficult for your opponent to miss. With your head, you can create an impact that is difficult for your opponent to miss. Your opponent will be forced to defend against the ball if it falls off your hand. You can also use this ability to create space on the pitch for your teammates. Write to Musabbir Hosain",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

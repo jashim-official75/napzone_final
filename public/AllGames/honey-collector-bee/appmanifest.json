@@ -1,0 +1,36 @@
+{
+	"name": "Honey Collector Bee",
+	"short_name": "Honey Collector Bee",
+	"description": "Honey Collector Bee Game is an online platformer about a bee who collects flower and make honey. Do you want to play the best free online platformer games? You will find a lot of fun playing Honey Collector Bee Game. This game is a lot of fun and it is also a great way to learn more about bees and beekeeping. The Honey Collector Bee Game is an exciting free online platformer that lets you experience what it's like to be a bee. You can choose the flowers you want to collect and trade them in at the hive for different types of honey. The best part is that it's compatible with mobile devices, so you can play it everywhere!  You've got to be positively buzzing over this amazing indie game platformer! This beekeeper's been waiting for a long time to share it with everyone, so start collecting flowers, be the best bee you can be and make yourself some honey while doing what you were made to do: Take care of the garden of life.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

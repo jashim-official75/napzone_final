@@ -1,0 +1,36 @@
+{
+	"name": "Bushman Bamboo",
+	"short_name": "Bushman Bamboo",
+	"description": "Enjoy your free time exploring bushmen journeys with the help of bamboo. From all over the internet this free online game is the best just for you. For any activity level it is the perfect game. Game features Entertaining and enjoyable. High quality graphics. Challenging levels.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

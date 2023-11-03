@@ -1,0 +1,36 @@
+{
+	"name": "Twining",
+	"short_name": "Twining",
+	"description": "Twining Color Switch comes the Color Switch Lovers New Color Switch World Twining games are made for increasing the focusing level of players. In this game a candy drops from the middle of the circle. The circle has four colors. Players need to tab left and right to switch the circle colors. When the same-colored candy drops the same side of the circle color, then the candy color will change. If somehow the player is losing his/her attention from the game, then there are more possibilities that he/she loses.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#000000",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "33x33",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "115x115",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

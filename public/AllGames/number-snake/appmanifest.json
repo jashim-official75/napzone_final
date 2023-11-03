@@ -1,0 +1,36 @@
+{
+	"name": "Number Snake",
+	"short_name": "Number Snake",
+	"description": "Swipe your finger to guide a snake of balls and break the bricks. With Number Snake Game, you can play this challenging game using your finger. The objective is to guide the snake of balls through a maze of obstacles, and break as many bricks as possible. There are different levels of difficulty that you can change at any time, so there's always something new to try.  Get additional balls and make the biggest snake ever!  This fun and challenging game is easy to play but hard to reach high scores, so be sure to challenge yourself!",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

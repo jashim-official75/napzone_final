@@ -1,0 +1,36 @@
+{
+	"name": "Shoots Skibidi",
+	"short_name": "Shoots Skibidi",
+	"description": "Shoots Skibidi Dop Dop Yes Yes Tap Down is the most addictive shooting game. With its simple yet challenging gameplay, you'll be hooked from the first time you play. Tap down to shoot the enemies as they come at you from all sides. Use your powerups to take down the bosses and progress to the next level. There are endless hours of fun to be had with Shoots Skibidi Dop Dop Yes Yes Tap Down.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#fafafa",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

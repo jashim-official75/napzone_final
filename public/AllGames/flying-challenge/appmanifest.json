@@ -1,0 +1,36 @@
+{
+	"name": "Flying Challenge",
+	"short_name": "Flying Challenge",
+	"description": "Flying Challenge is a Flappy Bird game with a twist. In this game, you control a bird that is trying to fly through a series of obstacles, including bow, and other objects. The goal is to fly as far as you can without hitting anything. The game is simple to play but difficult to master. You control the bird by tapping the screen. Tapping the screen makes the bird flap its wings, which gives it lift. You need to time your taps carefully in order to avoid the obstacles.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "any",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

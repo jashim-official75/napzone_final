@@ -1,0 +1,36 @@
+{
+	"name": "Choco Ball",
+	"short_name": "Choco Ball",
+	"description": "Enjoy a fun and challenging experience as you draw lines through a slew of obstacles! Get into the action fast as you help those cute little choco balls reach their destination at each level.  Unlock all kinds of different balls like fireballs, ice cubes, and Play with your friends for free Draw lines to guide the Choco Balls into a basket for your little girl. But watch out, it's not as simple as you think! The balls will continuously rise from below and then fall, so be careful with those tricky angles - one wrong move could cost you three lives.  Are you the master of precision? You have to help our little girl collect all of her chocolates by drawing lines through them. If so, test your anticipation skills in this fantastic draw a line game. One of the best line drawing games is here to kill your boredom. Numerous amounts of choco balls rising from below, then falling on the line! So help a poor girl to have some choco balls in this ball line game! ",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#000000",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}
