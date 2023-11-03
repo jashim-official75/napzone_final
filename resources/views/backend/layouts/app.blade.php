@@ -21,6 +21,8 @@
     <link href="{{ asset('/assets/backend/css/style.css') }}" rel="stylesheet">
     <!-- colors from-->
     <link href="{{ asset('/assets/backend/css/colors/blue.css') }}" id="theme" rel="stylesheet">
+    <!---new add ---->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     @yield('styles')
     @livewireStyles
 </head>

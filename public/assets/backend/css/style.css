@@ -25,6 +25,14 @@
     left: calc(50% - 3.5px)
 }
 
+/* new add style  */
+.tox .tox-statusbar a, .tox .tox-statusbar__path-item, .tox .tox-statusbar__wordcount{
+    display:none !important;
+}
+.tox .tox-notification--warn, .tox .tox-notification--warning{
+    display:none !important;
+}
+
 * {
     outline: none
 }
@@ -439,7 +447,7 @@ html body .b-all {
 }
 
 .img-circle {
-    border-radius: 100%
+    border-radius: 50%;
 }
 
 .radius {
@@ -6081,7 +6089,7 @@ a.mytooltip {
 }
 
 .contact-list td img {
-    width: 30px
+    /* width: 30px */
 }
 
 .list-style-none {

@@ -10,7 +10,6 @@
 @endsection
 
 @section('content')
-
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -35,8 +34,8 @@
                                     <tr>
                                         <td>{{ $loop->index + 1 }}</td>
                                         <td>
-                                            <img src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
-                                                alt="user" width="40" class="img-circle" /> {{ $game->game_name }}
+                                            <img src="{{ asset($game->game_thumbnail) }}" alt="user" width="40"
+                                                class="img-circle" /> {{ $game->game_name }}
                                         </td>
                                         <td>{{ $game->is_exclusive == 1 ? 'yes' : 'no' }}</td>
                                         <td>{{ $game->is_free == 1 ? 'yes' : 'no' }}</td>
@@ -51,11 +50,8 @@
                                             @endforeach
                                             {{ implode(', ', $categories) }}
                                         </td>
-
                                         <td>{{ $game->game_file }}</td>
-
                                         <td>
-
                                             <a href="{{ route('dashboard.game.edit', $game) }}" data-toggle="tooltip"
                                                 data-original-title="Edit" style="background: transparent; border: none;">
                                                 <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
@@ -96,11 +92,9 @@
             </div>
         </div>
     </div>
-
 @endsection
 
 @section('scripts')
-
     <!-- Footable -->
     {{-- <script src="{{ asset('/assets/backend/plugins/footable/js/footable.all.min.js') }}"></script> --}}
     <!--FooTable init-->

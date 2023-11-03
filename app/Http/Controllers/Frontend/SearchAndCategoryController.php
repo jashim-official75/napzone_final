@@ -58,7 +58,7 @@ class SearchAndCategoryController extends Controller
              }
          }
         $search = $request->get('keyword');
-        $games = Game::where('game_name', 'LIKE', '%' . $search . '%')->get();
+        $games = Game::where('game_name', 'LIKE', '%' . $search . '%')->latest()->take(10)->get();
         return view('frontend.pages.searchGames', compact('games', 'logIn', 'purchasePlanDetail'));
     }
     public function category(Request $request, $categoryName)

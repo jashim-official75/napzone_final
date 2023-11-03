@@ -14,7 +14,6 @@
                 <a href="#" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a> --}}
                 <a href="{{ route('admin.logout') }}" class="" data-toggle="tooltip" title="Logout"><i
                         class="mdi mdi-power"></i></a>
-
             </div>
         </div>
         <!-- End User profile text-->
@@ -25,6 +24,9 @@
                 <li class="nav-small-cap">ANALYTICS</li>
                 <li> <a class="waves-effect waves-dark" href="{{ route('dashboard') }}" aria-expanded="false"><i
                             class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
+                </li>
+                <li> <a class="waves-effect waves-dark" href="{{ route('blog.index') }}" aria-expanded="false"><i
+                            class="mdi mdi-gauge"></i><span class="hide-menu">Blogs </span></a>
                 </li>
                 <li class="nav-small-cap">GAMES</li>
                 <li> <a class="waves-effect waves-dark" href="{{ route('dashboard.game.show') }}"
@@ -41,8 +43,8 @@
                 </li>
                 <li class="nav-small-cap">SUBSCRIBERS</li>
                 <li> <a class="waves-effect waves-dark" href="{{ route('dashboard.subscribers') }}"
-                        aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span
-                            class="hide-menu">Subscribers </span></a>
+                        aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Subscribers
+                        </span></a>
                 </li>
                 <li> <a class="waves-effect waves-dark" href="{{ route('dashboard.subscribers.gamePlayed') }}"
                         aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">All

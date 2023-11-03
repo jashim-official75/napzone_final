@@ -8,6 +8,9 @@ use App\Models\Game;
 use App\Models\GameCategory;
 use App\Models\Support;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
+use ZipArchive;
 
 class GameController extends Controller
 {
@@ -30,25 +33,37 @@ class GameController extends Controller
         $request->validate([
             'game_name' => 'required|unique:games,game_name',
             'category_name' => 'required',
-            'is_free' => 'required',
             'is_exclusive' => 'required',
+            'description' => 'required',
+            'zip' => 'required|mimes:zip',
             'game_thumbnail' => 'required|image',
         ]);
-
         $allData = $request->all();
-
         // Game thumbnail Upload
         $file = $allData['game_thumbnail'];
         $thumbnailName = time() . '-' . $file->getClientOriginalName();
-        $file->move(public_path('assets/frontend/images/uploads/games_img'), $thumbnailName);
-
+        $path_name = 'Uploads/Game/Thumbnail/' . $thumbnailName;
+        $file->move(public_path('Uploads/Game/Thumbnail'), $thumbnailName);
         // Game Table datas
+
+        //---game zip file upload
+        $file = $request->file('zip');
+        $zip = new ZipArchive();
+        $zip->open($file->path());
+        $pathName = 'AllGames/' . Str::slug($request->game_name, '-');
+        $zip->extractTo($pathName);
+
         $game = [
             'game_name' => $allData['game_name'],
-            'game_thumbnail' => $thumbnailName,
-            'is_free' => $allData['is_free'],
+            'game_thumbnail' => $path_name,
+            'zip' => $pathName,
+            'is_free' => '0',
             'is_exclusive' => $allData['is_exclusive'],
-            'game_file' => str_replace(" ", "-", strtolower($allData['game_name'])),
+            'game_file' => Str::slug($request->game_name),
+            'description' => $allData['description'],
+            'meta_title' => $allData['meta_title'],
+            'meta_keyword' => $allData['meta_keyword'],
+            'meta_description' => $allData['meta_description'],
         ];
 
         // Insert data on Game Table
@@ -64,7 +79,6 @@ class GameController extends Controller
                 GameCategory::create($addCategory);
             }
         }
-
         return redirect()->route('dashboard.game.show');
     }
 
@@ -80,58 +94,61 @@ class GameController extends Controller
         $request->validate([
             'game_name' => 'required',
             'category_name' => 'required',
-            'is_free' => 'required',
             'is_exclusive' => 'required',
             'game_thumbnail' => 'image',
+            'zip' => 'mimes:zip',
         ]);
 
         $allData = $request->all();
 
-        /////////// Game thumbnail Upload process start ///////////////
-        $file = $allData['game_thumbnail'] ?? 0;
-        $thumbnailName = $game->game_thumbnail;
-        // Game thumbnail Delete previous and upload new
-        if ($file && $file->getClientOriginalName() !== $game->game_thumbnail) {
-            $thumbnailName = time() . '-' . $file->getClientOriginalName();
-            unlink(public_path('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail));
-            $file->move(public_path('assets/frontend/images/uploads/games_img'), $thumbnailName);
-        }
-        /////////// Game thumbnail Upload process End ///////////////
+        // /////////// Game thumbnail Upload process start ///////////////
+        // $file = $allData['game_thumbnail'] ?? 0;
+        // $thumbnailName = $game->game_thumbnail;
+        // // Game thumbnail Delete previous and upload new
+        // if ($file && $file->getClientOriginalName() !== $game->game_thumbnail) {
+        //     $thumbnailName = time() . '-' . $file->getClientOriginalName();
+        //     $path_name = 'Uploads/Game/Thumbnail/' . $thumbnailName;
+        //     unlink(public_path($game->game_thumbnail));
+        //     $file->move(public_path('Uploads/Game/Thumbnail'), $thumbnailName);
+        // }
+        // /////////// Game thumbnail Upload process End ///////////////
 
-        // Game Table datas
-        $updatedGame = [
-            'game_name' => $allData['game_name'],
-            'game_thumbnail' => $thumbnailName,
-            'is_free' => $allData['is_free'],
-            'is_exclusive' => $allData['is_exclusive'],
-            'game_file' => str_replace(" ", "-", strtolower($allData['game_name'])),
-        ];
+        // // Game Table datas
+        // $updatedGame = [
+        //     'game_name' => $allData['game_name'],
+        //     'is_free' => '0',
+        //     'is_exclusive' => $allData['is_exclusive'],
+        //     'game_file' => str_replace(" ", "-", strtolower($allData['game_name'])),
+        // ];
 
-        // Insert data on Game Table and if true update the categories
-        if ($game->update($updatedGame)) {
-            // Delete All Categories
-            $uploadedGame = Game::where('game_name', $allData['game_name'])->first();
-            GameCategory::where('game_id', $uploadedGame->id)->delete();
-            // Add Game Categories
-            foreach ($allData['category_name'] as $category) {
-                $addCategory = [
-                    'game_id' => $uploadedGame->id,
-                    'category_id' => $category,
-                ];
+        // // Insert data on Game Table and if true update the categories
+        // if ($game->update($updatedGame)) {
+        //     // Delete All Categories
+        //     $uploadedGame = Game::where('game_name', $allData['game_name'])->first();
+        //     GameCategory::where('game_id', $uploadedGame->id)->delete();
+        //     // Add Game Categories
+        //     foreach ($allData['category_name'] as $category) {
+        //         $addCategory = [
+        //             'game_id' => $uploadedGame->id,
+        //             'category_id' => $category,
+        //         ];
 
-                GameCategory::create($addCategory);
-            }
-        }
+        //         GameCategory::create($addCategory);
+        //     }
+        // }
 
         return redirect()->route('dashboard.game.show');
     }
 
     public function destroy(Game $game)
     {
-        unlink(public_path('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail));
-
+        if($game->game_thumbnail){
+            File::delete(public_path($game->game_thumbnail));
+        }
+        if($game->zip){
+            File::deleteDirectory(public_path($game->zip));
+        }
         $game->delete();
-
-        return back()->with('delete', 'The post has been deleted successfully.');
+        return back()->with('delete', 'The Game has been deleted successfully.');
     }
 }

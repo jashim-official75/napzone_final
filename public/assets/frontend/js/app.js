@@ -1,3 +1,19 @@
+
+$(document).ready(function() {
+  $("#toggleButton").click(function() {
+      $("#searchBar").fadeToggle(); // Show/hide the search bar
+      if ($("#searchBar").is(":visible")) {
+          // If the search bar is visible, focus on the input field
+          $("#searchInput").focus();
+          $(".submenu").hide();
+      }
+  });
+});
+
+
+
+
+
 let prevScrollPos = window.pageYOffset;
 const header = document.getElementById("header");
 
@@ -16,6 +32,7 @@ window.onscroll = () => {
 
 $(".profile_icon").click(function(){
   $(".submenu").fadeToggle();
+  $("#searchBar").hide();
 });
 
 

@@ -36,7 +36,7 @@
                                     target="_blank"
                                     @if($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription"  @endif
                                     >
-                                        <img class=" taandtm__rr--img" src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}" alt="{{ $game->game_name }}">
+                                        <img class=" taandtm__rr--img" src="{{ asset($game->game_thumbnail) }}" alt="{{ $game->game_name }}">
                                         <h3 class="taandtm__rr--title">{{ $game->game_name }}</h3>
                                     </a>
                                 </div>

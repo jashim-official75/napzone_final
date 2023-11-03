@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\BackendController;
+use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\CategoryControler;
 use App\Http\Controllers\Backend\GameController;
 use App\Http\Controllers\Backend\GamePlayedController;
@@ -29,9 +30,10 @@ Route::post('/profile/{id}', [ProfileController::class, 'profile_update'])->name
 Route::get('/search', [SearchAndCategoryController::class, 'search'])->name('search');
 Route::get('/category/{categoryName}', [SearchAndCategoryController::class, 'category'])->name('category');
 Route::get('/game/{categoryName}', [SearchAndCategoryController::class, 'category'])->name('category');
-Route::get('/games/{gameName}/play', [GamePlayController::class, 'game'])->name('game');
+Route::get('/games/{gameName}/play', [GamePlayController::class, 'play'])->name('game.play');
+Route::get('/game_play/{gameName}', [GamePlayController::class, 'game'])->name('game');
 Route::post('/game/favorite', [FavoriteGameController::class, 'favorite_game']);
-Route::get('/ip',function(){
+Route::get('/ip', function () {
     // echo $_SERVER['SERVER_ADDR'];
     echo request()->getClientIp();
     // echo "Test";
@@ -66,7 +68,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
     Route::get('/subscriber/{phoneNum}', [GamePlayedController::class, 'subscriberGamePlayed'])->name('dashboard.subscriber.gamePlayed');
     Route::get('/all-game-played', [GamePlayedController::class, 'allGamePlayed'])->name('dashboard.subscribers.gamePlayed');
     Route::get('/purchase-plan', [BackendSubscriberController::class, 'purchasePlans'])->name('dashboard.subscribers.purchasePlans');
+
+    //--resource route--
+    Route::resource('/blog', BlogController::class);
 });
-
-
-

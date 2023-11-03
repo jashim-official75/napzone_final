@@ -54,7 +54,8 @@
                                 <p>Subscribe now and get access to exclusive games.</p>
                             </span>
                             <span class="bounce-in-text mt-4">
-                                <a href="#" class="btn__primary" data-toggle="modal" data-target="#subscription">Subscribe
+                                <a href="#" class="btn__primary" data-toggle="modal"
+                                    data-target="#subscription">Subscribe
                                     Now</a>
                             </span>
                         </div>
@@ -81,10 +82,9 @@
                                 <div class="col-xl-2 col-lg-3 col-md-4 col-6 taandtm__rr--item" data-aos="zoom-in-up">
                                     <div class="card-hover">
                                         <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
-                                            target="_blank"
                                             @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                             <img class="taandtm__rr--img"
-                                                src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                                src="{{ asset($game->game_thumbnail) }}"
                                                 alt="{{ $game->game_name }}">
                                             <h3 class="taandtm__rr--title">{{ $game->game_name }}</h3>
                                         </a>
@@ -111,11 +111,10 @@
                                 @foreach ($favorite_games as $game)
                                     <div class="col-xl-2 col-lg-3 col-md-4 col-6 taandtm__rr--item" data-aos="zoom-in-up">
                                         <div class="card-hover">
-                                            <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game->game_file) }} @else # @endif"
-                                                target="_blank"
+                                            <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game.play', $game->game->game_file) }} @else # @endif"
                                                 @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                                 <img class="taandtm__rr--img"
-                                                    src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game->game_thumbnail) }}"
+                                                    src="{{ asset($game->game->game_thumbnail) }}"
                                                     alt="{{ $game->game->game_name }}">
                                                 <h3 class="taandtm__rr--title">{{ $game->game->game_name }}</h3>
                                             </a>
@@ -145,12 +144,12 @@
                         <div class="col-xl-3 col-lg-4 col-md-4 col-6 card exgame__item" data-aos="zoom-in-up">
                             <div class="card-hover border-rad">
                                 <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
-                                    class="game-btn" target="_blank"
+                                    class="game-btn"
                                     @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                     <img class="card-img-top"
-                                        src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                        src="{{ asset($game->game_thumbnail) }}"
                                         alt="{{ $game->game_name }}">
-                                   
+
                                 </a>
                                 <div class="card-body">
                                     <h2 class="card-title">{{ $game->game_name }}</h2>
@@ -200,11 +199,11 @@
                     @foreach ($allGames as $game)
                         <div class="col-xl-3 col-lg-4 col-md-4 col-6 card exgame__item" data-aos="zoom-in-up">
                             <div class="card-hover border-rad">
-                                <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
-                                    class="game-btn" target="_blank"
+                                <a href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game.play', $game->game_file) }} @else # @endif"
+                                    class="game-btn"
                                     @if ($logIn == 0) data-toggle="modal" data-target="#login" @elseif(!$game->is_free && empty($purchasePlanDetail)) data-toggle="modal" data-target="#subscription" @endif>
                                     <img class="card-img-top"
-                                        src="{{ asset('assets/frontend/images/uploads/games_img/' . $game->game_thumbnail) }}"
+                                        src="{{ asset($game->game_thumbnail) }}"
                                         alt="{{ $game->game_name }}">
                                 </a>
                                 <div class="card-body">
@@ -212,7 +211,7 @@
                                     <div class="card-bottom d-flex align-items-center justify-content-between">
                                         @foreach ($game->gameCategories->take(1) as $category)
                                             <a class="btn"
-                                                href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game', $game->game_file) }} @else # @endif"
+                                                href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game.play', $game->game_file) }} @else # @endif"
                                                 style="text-transform: capitalize">{{ $category->categoryName->category_name }}</a>
                                         @endforeach
                                         @if ($logIn == 0)
@@ -222,16 +221,20 @@
                                         @else
                                             @if (!empty($purchasePlanDetail))
                                                 @php
-                                                    $fGame = App\Models\FavoriteGame::where('subscriber_id', $subscriber->id)->where('game_id', $game->id)->first();
+                                                    $fGame = App\Models\FavoriteGame::where('subscriber_id', $subscriber->id)
+                                                        ->where('game_id', $game->id)
+                                                        ->first();
                                                 @endphp
                                                 @if ($fGame)
-                                                    <span class="favorite_icon fgame" id="favorite_icon" title="remove favorite game"
-                                                        data-user="{{ $subscriber->id }}" data-id="{{ $game->id }}">
+                                                    <span class="favorite_icon fgame" id="favorite_icon"
+                                                        title="remove favorite game" data-user="{{ $subscriber->id }}"
+                                                        data-id="{{ $game->id }}">
                                                         <i class="fas fa-heart"></i>
                                                     </span>
                                                 @else
-                                                    <span class="favorite_icon fgame" id="favorite_icon" title="add favorite game"
-                                                        data-user="{{ $subscriber->id }}" data-id="{{ $game->id }}">
+                                                    <span class="favorite_icon fgame" id="favorite_icon"
+                                                        title="add favorite game" data-user="{{ $subscriber->id }}"
+                                                        data-id="{{ $game->id }}">
                                                         <i class="far fa-heart"></i>
                                                     </span>
                                                 @endif
@@ -265,7 +268,7 @@
             <div class="container">
                 <div class="row tandg__items">
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="tandg__item" href="https://www.youtube.com/watch?v=UkR_vbwl_Ws" target="_blank">
+                        <a class="tandg__item" href="https://www.youtube.com/watch?v=UkR_vbwl_Ws">
                             <img class="tandg__item--banner" src="https://img.youtube.com/vi/UkR_vbwl_Ws/hqdefault.jpg"
                                 alt="">
                             <img class="tandg__item--icon"
@@ -273,7 +276,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="tandg__item" href="https://www.youtube.com/watch?v=juh6AguSGho" target="_blank">
+                        <a class="tandg__item" href="https://www.youtube.com/watch?v=juh6AguSGho">
                             <img class="tandg__item--banner" src="https://img.youtube.com/vi/juh6AguSGho/hqdefault.jpg"
                                 alt="">
                             <img class="tandg__item--icon"
@@ -281,7 +284,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="tandg__item" href="https://www.youtube.com/watch?v=B3kbk5LPRhQ" target="_blank">
+                        <a class="tandg__item" href="https://www.youtube.com/watch?v=B3kbk5LPRhQ">
                             <img class="tandg__item--banner" src="https://img.youtube.com/vi/B3kbk5LPRhQ/hqdefault.jpg"
                                 alt="">
                             <img class="tandg__item--icon"
@@ -289,7 +292,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a class="tandg__item" href="https://www.youtube.com/watch?v=WXaZ7S4mGJo" target="_blank">
+                        <a class="tandg__item" href="https://www.youtube.com/watch?v=WXaZ7S4mGJo">
                             <img class="tandg__item--banner" src="https://img.youtube.com/vi/WXaZ7S4mGJo/hqdefault.jpg"
                                 alt="">
                             <img class="tandg__item--icon"
