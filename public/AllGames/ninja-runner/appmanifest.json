@@ -1,0 +1,36 @@
+{
+	"name": "Ninja Runner",
+	"short_name": "Ninja Runner",
+	"description": "Escape your enemies by jumping and sliding over and under obstacles with the arrow keys, as you sprint along the 2D landscape, collecting gold to buy upgrades on the way. You can climb the tower higher by collecting ninjas and get bonuses.",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "icons/icon-16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-114.png",
+			"sizes": "114x114",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "icons/icon-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		}
+	]
+}

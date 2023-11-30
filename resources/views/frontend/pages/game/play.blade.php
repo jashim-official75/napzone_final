@@ -17,34 +17,18 @@
             </div>
         </div>
     </section>
-    {{-- <div class="gamePlaydescription">
+    <div class="gamePlaydescription">
         <div class="container">
             <div class="gamescontent">
                 <article>
                     <main>
                         <h2>Game Descripiton</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eveniet ducimus, omnis quisquam
-                            libero quia consectetur dignissimos quasi asperiores esse similique aspernatur illum commodi
-                            laborum consequatur saepe, voluptatem repellat! Maxime corporis repudiandae vitae sapiente, fuga
-                            eum ipsa ab unde vel autem? Dolor cum vero excepturi neque, architecto numquam autem
-                            dignissimos, id beatae voluptas deserunt. Hic, aspernatur. Velit sint voluptate sapiente
-                            reiciendis itaque quod adipisci praesentium rerum ullam pariatur libero eum id officia dolorem
-                            saepe quam laudantium aliquam, dignissimos impedit expedita ipsa unde distinctio error quis?
-                            Tempora officia atque esse quo earum cum rem non eligendi quis praesentium consequuntur nesciunt
-                            nam doloremque itaque facere ut iusto eaque tempore illo, rerum unde. Ullam iusto voluptate
-                            nobis, nostrum culpa quibusdam hic. Laborum laboriosam iste ducimus consequatur adipisci,
-                            sapiente totam. Molestiae sapiente delectus quia minima, ea doloremque soluta possimus aperiam
-                            debitis quos, quaerat dolore nam iusto vitae obcaecati nemo? Nisi vitae sint molestiae delectus
-                            earum at, velit doloremque esse tempora, voluptate natus perferendis explicabo exercitationem
-                            itaque quod nobis quisquam sit amet aperiam temporibus blanditiis nam, fuga labore. Quasi illum
-                            maiores labore veritatis vero, fugit soluta iste qui exercitationem blanditiis. Similique
-                            impedit optio illo dignissimos. Autem sit dolorem omnis mollitia eligendi maiores accusantium
-                            deserunt. Totam.</p>
+                        <p>{{ $game->description }}</p>
                     </main>
                 </article>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- ------------------------- Related games Section Start ---------------------- -->
     <section id="exgame">
         <div class="container bg-color">
@@ -72,36 +56,6 @@
                                             href="@if ($logIn == 1 && !empty($purchasePlanDetail)) {{ route('game.play', $game->game_file) }} @else # @endif"
                                             style="text-transform: capitalize">{{ $category->categoryName->category_name }}</a>
                                     @endforeach
-                                    {{-- @if ($logIn == 0)
-                                        <span class="favorite_icon" data-toggle="modal" data-target="#login">
-                                            <i class="fas fa-heart"></i>
-                                        </span>
-                                    @else
-                                        @if (!empty($purchasePlanDetail))
-                                            @php
-                                                $fGame = App\Models\FavoriteGame::where('subscriber_id', $subscriber->id)
-                                                    ->where('game_id', $game->id)
-                                                    ->first();
-                                            @endphp
-                                            @if ($fGame)
-                                                <span class="favorite_icon fgame" id="favorite_icon"
-                                                    title="remove favorite game" data-user="{{ $subscriber->id }}"
-                                                    data-id="{{ $game->id }}">
-                                                    <i class="fas fa-heart"></i>
-                                                </span>
-                                            @else
-                                                <span class="favorite_icon fgame" id="favorite_icon"
-                                                    title="add favorite game" data-user="{{ $subscriber->id }}"
-                                                    data-id="{{ $game->id }}">
-                                                    <i class="far fa-heart"></i>
-                                                </span>
-                                            @endif
-                                        @else
-                                            <span class="favorite_icon" data-toggle="modal" data-target="#subscription">
-                                                <i class="fas fa-heart"></i>
-                                            </span>
-                                        @endif
-                                    @endif --}}
                                 </div>
                             </div>
 

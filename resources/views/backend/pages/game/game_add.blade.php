@@ -95,6 +95,24 @@
                                                 </label>
                                             </div>
                                         </div>
+
+                                        <div class="form-group">
+                                            <label for="is_frees" class="mb-3">Is Free ?</label>
+                                            <div class="m-b-10">
+                                                <label class="custom-control custom-radio">
+                                                    <input id="radio1" type="radio" class="custom-control-input"
+                                                        name="is_free" value="1">
+                                                    <span class="custom-control-label">Yes</span>
+                                                </label>
+                                            </div>
+                                            <div class="m-b-10">
+                                                <label class="custom-control custom-radio">
+                                                    <input id="radio2" type="radio" class="custom-control-input"
+                                                        name="is_free" value="0">
+                                                    <span class="custom-control-label">No</span>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

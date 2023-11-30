@@ -48,19 +48,21 @@ class HomeController extends Controller
                     $purchasePlanDetail = null;
                 } elseif ($result->result_code == 400) {
                     $purchasePlanDetail = null;
+                } elseif ($result->result_code == 0 && $request->status == 'F') {
+                    $purchasePlanDetail = null;
                 } elseif ($result->result_code == 0) {
                     $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
-                }else{
+                } else {
                     $purchasePlanDetail = PurchasePlan::where('subscriber_id', $subscriber->id)->where('confirmed_by_user', 1)->latest()->first();
                 }
             }
         }
         $favorite_games = null;
         $freeGames =  Game::where('is_free', 1)->where('is_exclusive', 0)->get();
-        $multiPlayerGame = Game::where('is_free', 0)->where('is_exclusive', 0)->take(12)->get();
+        $multiPlayerGame = Game::where('is_free', 0)->where('is_exclusive', 0)->take(8)->get();
         $exclusiveGames = Game::where('is_free', 0)->with('FavoriteGame', 'gameCategories')->where('is_exclusive', 1)->get();
-        if($subscriber){
-            $favorite_games = FavoriteGame::where('subscriber_id', $subscriber->id)->with('game')->take(6)->get();
+        if ($subscriber) {
+            $favorite_games = FavoriteGame::where('subscriber_id', $subscriber->id)->with('game')->take(8)->get();
         }
         $allGames = Game::latest()->with('FavoriteGame')->get();
         return view('frontend.pages.home', compact('freeGames', 'multiPlayerGame', 'exclusiveGames', 'logIn', 'purchasePlanDetail', 'allGames', 'subscriber', 'favorite_games'));

@@ -87,11 +87,11 @@
                                             <input type="file" id="thumbnail" class="dropify"
                                                 data-max-file-size="2M" name="game_thumbnail" />
                                         </div>
-                                        <div class="mb-2">
+                                        {{-- <div class="mb-2">
                                             <label for="zip" class="mb-4">Game Zip File</label>
                                             <input type="file" id="zip" class="dropify" name="zip"
                                                 accept=".zip" />
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group">
                                             <label for="exclusive" class="mb-3">Exclusive Game?</label>
                                             <div class="m-b-10">
@@ -111,6 +111,25 @@
                                                 </label>
                                             </div>
                                         </div>
+
+                                        <div class="form-group">
+                                            <label for="is_frees" class="mb-3">Is Free ?</label>
+                                            <div class="m-b-10">
+                                                <label class="custom-control custom-radio">
+                                                    <input id="radio1" type="radio" class="custom-control-input"
+                                                        name="is_free" value="1" {{ $game->is_free == 1 ? 'checked' : '' }}>
+                                                    <span class="custom-control-label">Yes</span>
+                                                </label>
+                                            </div>
+                                            <div class="m-b-10">
+                                                <label class="custom-control custom-radio">
+                                                    <input id="radio2" type="radio" class="custom-control-input"
+                                                        name="is_free" value="0" {{ $game->is_free == 0 ? 'checked' : '' }}>
+                                                    <span class="custom-control-label">No</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

@@ -16,16 +16,14 @@ class GameController extends Controller
 {
     public function show()
     {
-        $notification = Support::where('contacted', 0)->orderByDesc('created_at')->take(3)->get();
-        $games = Game::paginate(10);
-        return view('backend.pages.game.game_show', compact('games', 'notification'));
+        $games = Game::latest()->paginate(20);
+        return view('backend.pages.game.game_show', compact('games'));
     }
 
     public function add(Request $request)
     {
-        $notification = Support::where('contacted', 0)->orderByDesc('created_at')->take(3)->get();
         $categories = Category::get();
-        return view('backend.pages.game.game_add', compact('categories', 'notification'));
+        return view('backend.pages.game.game_add', compact('categories'));
     }
 
     public function store(Request $request)
@@ -57,7 +55,7 @@ class GameController extends Controller
             'game_name' => $allData['game_name'],
             'game_thumbnail' => $path_name,
             'zip' => $pathName,
-            'is_free' => '0',
+            'is_free' => $request->is_free,
             'is_exclusive' => $allData['is_exclusive'],
             'game_file' => Str::slug($request->game_name),
             'description' => $allData['description'],
@@ -75,7 +73,6 @@ class GameController extends Controller
                     'game_id' => $uploadedGame->id,
                     'category_id' => $category,
                 ];
-
                 GameCategory::create($addCategory);
             }
         }
@@ -84,9 +81,8 @@ class GameController extends Controller
 
     public function edit(Game $game)
     {
-        $notification = Support::where('contacted', 0)->orderByDesc('created_at')->take(3)->get();
         $categories = Category::all();
-        return view('backend.pages.game.game_edit', compact('game', 'categories', 'notification'));
+        return view('backend.pages.game.game_edit', compact('game', 'categories'));
     }
 
     public function update(Request $request, Game $game)
@@ -100,6 +96,28 @@ class GameController extends Controller
         ]);
 
         $allData = $request->all();
+        if ($request->hasFile('zip') == '') {
+            $game->update([
+                'game_name' => $request->game_name,
+                'is_free' => $request->is_free,
+                'is_exclusive' => $request->is_exclusive,
+                'game_file' => Str::slug($request->game_name),
+                'description' => $request->description,
+                'meta_title' => $request->meta_title,
+                'meta_keyword' => $request->meta_keyword,
+                'meta_description' => $request->meta_description,
+            ]);
+        }
+
+        if ($request->hasFile('game_thumbnail')) {
+            if ($game->game_thumbnail) {
+                File::delete(public_path($game->game_thumbnail));
+            }
+            $thumbnailName = time() . '-' . $request->file('game_thumbnail')->getClientOriginalName();
+            $path_name = 'Uploads/Game/Thumbnail/' . $thumbnailName;
+            $request->file('game_thumbnail')->move(public_path('Uploads/Game/Thumbnail'), $thumbnailName);
+            $game->update(['game_thumbnail' => $path_name]);
+        }
 
         // /////////// Game thumbnail Upload process start ///////////////
         // $file = $allData['game_thumbnail'] ?? 0;
@@ -142,10 +160,10 @@ class GameController extends Controller
 
     public function destroy(Game $game)
     {
-        if($game->game_thumbnail){
+        if ($game->game_thumbnail) {
             File::delete(public_path($game->game_thumbnail));
         }
-        if($game->zip){
+        if ($game->zip) {
             File::deleteDirectory(public_path($game->zip));
         }
         $game->delete();
