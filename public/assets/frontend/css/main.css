@@ -1,10 +1,10 @@
 /* gameplay */
-.gamePlay 
+.gamePlay
 {
   position: relative;
   padding: 8rem 0 ;
 }
-.gamePlayscreen 
+.gamePlayscreen
 {
   position: relative;
   width: 1320px;
@@ -17,7 +17,7 @@
   box-shadow: 0 5px 25px rgba(0,0,0,0.4);
   border: 0.1rem solid #fff4;
 }
-.gamePlayscreen iframe 
+.gamePlayscreen iframe
 {
   position: absolute;
   top: 0;
@@ -26,7 +26,7 @@
   height: 100%;
   border-radius: 15px 15px 0 0;
 }
-.gameBottom 
+.gameBottom
 {
   position: absolute;
   top: 100%;
@@ -41,23 +41,23 @@
   color: #fff;
   border: 0.1rem solid #fff1;
 }
-.gameBottom .gameName 
+.gameBottom .gameName
 {
   font-size: 1.4rem;
   font-weight: 300;
   color:#fff;
-} 
-.gameBottom .fullscreenBtn 
+}
+.gameBottom .fullscreenBtn
 {
   transform: scale(0.9);
   transition: all .3s ease;
   cursor: pointer;
-} 
-.gameBottom .fullscreenBtn:hover 
+}
+.gameBottom .fullscreenBtn:hover
 {
   transform: scale(1);
-} 
-.gamePlaydescription 
+}
+.gamePlaydescription
 {
   margin-bottom: 5rem;
 }
@@ -70,14 +70,14 @@
   border: 1px solid #fff2;
 }
 
-.gamePlaydescription .gamescontent h2 
+.gamePlaydescription .gamescontent h2
 {
   font-size: clamp(1.6rem,5vw,1.8rem);
   padding: 1rem 0 2rem;
   border-bottom: 1px solid #fff2;
   margin-bottom: 1rem;
 }
-.gamePlaydescription .gamescontent p 
+.gamePlaydescription .gamescontent p
 {
   font-size: 14px;
   color: #fff8;
@@ -86,7 +86,7 @@
 /* gameplay */
 
 
-#profie_page 
+#profie_page
 {
   position: relative;
   height: 850px;
@@ -96,7 +96,7 @@
   justify-content: center;
 }
 
-.profie_inner 
+.profie_inner
 {
   background: rgba(255,255,255,0.1);
   width: 500px;
@@ -109,7 +109,7 @@
   justify-content: center;
   flex-direction: column;
 }
-.profile_header 
+.profile_header
 {
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@
   width: 100%;
   padding: 1rem 0 3rem;
 }
-.unsubscribe_btn 
+.unsubscribe_btn
 {
   display: block;
   background: rgba(255,255,255,0.1);
@@ -127,17 +127,17 @@
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-.unsubscribe_btn:hover 
+.unsubscribe_btn:hover
 {
   background: #f2b705;
   color: #000;
-} 
-.profie_inner h2 
+}
+.profie_inner h2
 {
   font-size: clamp(1.2rem , 2vw , 1.6rem);
   color: #fff;
 }
-.profile_img 
+.profile_img
 {
   position: relative;
   width: 8rem;
@@ -150,7 +150,7 @@
   overflow: hidden;
   margin: 0 auto;
 }
-.profile_img img 
+.profile_img img
 {
   position: absolute;
   top: 0;
@@ -161,7 +161,7 @@
   height: 100%;
   object-fit: cover;
 }
-.img_upload_icon 
+.img_upload_icon
 {
   position: absolute;
   bottom: -10px;
@@ -171,7 +171,7 @@
   text-align: center;
   cursor: pointer;
 }
-.img_upload_icon i 
+.img_upload_icon i
 {
   color: #fff8;
   font-size: 2rem;
@@ -181,21 +181,21 @@
 {
   background: #000;
 }
-.profile_img:hover .img_upload_icon i 
+.profile_img:hover .img_upload_icon i
 {
   color: #fff;
 }
 
-.update_info 
+.update_info
 {
   padding: 2rem 0;
 }
-.inputBx 
+.inputBx
 {
   position: relative;
   width: 100%;
 }
-.update_info input 
+.update_info input
 {
   width: 100%;
   margin-bottom: 1.5rem;
@@ -210,15 +210,15 @@
   border: 1px solid transparent;
   box-shadow: 0 0 3px 0px #f2b705;
 }
-.update_info input:focus 
+.update_info input:focus
 {
   border: 1px solid #f0e902;
   box-shadow: 0 0 6px 0px #f0e902;
-} 
-.update_info input::placeholder 
+}
+.update_info input::placeholder
 {
   color: #fff8;
-} 
+}
 .save_btn {
   text-align: center;
 }
@@ -236,11 +236,11 @@
   border: 0.2rem solid #fff8;
   box-shadow: 0 5px 2px rgba(0,0,0,0.2);
 }
-.save_btn button:hover 
+.save_btn button:hover
 {
   background: #fff;
 }
-#imageupload 
+#imageupload
 {
   display: none;
 
@@ -279,7 +279,7 @@
   border-top: none;
   box-shadow: 0 5px 25px rgba(0,0,0,0.4);
 }
-.submenu li a 
+.submenu li a
 {
   padding: 1rem 0;
   display: block;
@@ -291,12 +291,12 @@
 .submenu li:last-child a
 {
   border: none;
-} 
-.submenu li a:hover 
+}
+.submenu li a:hover
 {
   background: #fff;
   color: #000;
-} 
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -319,7 +319,7 @@ input[type="number"] {
   position: relative;
   width: 100%;
   height: 750px;
-  
+
 }
 .Gameplayground iframe {
   width: 100%;
@@ -328,7 +328,7 @@ input[type="number"] {
 }
 .game_topbar {
   position: absolute;
-  top: -64px; 
+  top: -64px;
   left: 0;
   width: 100%;
   height: 50px;
@@ -401,7 +401,7 @@ input[type="number"] {
     transform: translateY(-200px);
   }
   60% {
-    
+
     transform: translateY(30px);
   }
   80% {
@@ -410,7 +410,7 @@ input[type="number"] {
   }
   100% {
     transform: translateY(0);
-   
+
   }
 }
 .slide-in-text {
@@ -511,7 +511,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2000;
+  z-index: 200;
   transition: transform 0.3s ease-in-out;
   padding: 0rem 4rem;
   display: flex;
@@ -745,7 +745,7 @@ body {
   flex-wrap: nowrap;
   margin-left: auto;
 }
-.mobile_searchbar 
+.mobile_searchbar
 {
   position: absolute;
   background: #1c2833;
@@ -790,7 +790,7 @@ body {
 {
   box-shadow: none;
 }
-.search-button:hover 
+.search-button:hover
 {
   background: #ddd;
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
@@ -908,7 +908,7 @@ padding: 110px 0 50px;
   font-weight: 300;
   text-align: justify;
 }
-#taandtm .title 
+#taandtm .title
 {
   color: #f2b705;
   font-size: 25px;
@@ -956,7 +956,7 @@ padding: 110px 0 50px;
 }
 .border-rad:hover {
   transform: translateY(-5px);
-} 
+}
 .exgame__item {
   border: 0;
   border-radius: 22px;
@@ -988,6 +988,10 @@ padding: 110px 0 50px;
     font-weight: 600;
     letter-spacing: 0.03rem;
     color: #fff;
+    max-width: 100px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 .exgame__item .card-bottom a {
@@ -1050,7 +1054,7 @@ padding: 110px 0 50px;
   display: flex;
   cursor: pointer;
 }
-.mobile_searchicon:focus ,.mobile_searchicon:hover 
+.mobile_searchicon:focus ,.mobile_searchicon:hover
 {
   background: #ddd;
 }
@@ -1058,7 +1062,7 @@ padding: 110px 0 50px;
 display: none;
 }
 
-.profile_icon  
+.profile_icon
 {
   margin-left: 1rem;
 }
@@ -1080,7 +1084,7 @@ display: none;
     right: 5px !important;
     -webkit-transform: translate(0,0%) scale(0.5) !important;
     -ms-transform: translate(0,0%) scale(0.5) !important;
-    transform: translate(0,0%) scale(0.5) !important; 
+    transform: translate(0,0%) scale(0.5) !important;
 }
  .tandg__items .slick-next, .slick-prev {
     padding: 0 30px 0 0;
@@ -1345,7 +1349,7 @@ display: none;
 }
 .form-container form input::textarea {
   color: rgba(255,255,255,0.4);
-} 
+}
 .form-container .form-container__title {
   text-align: center;
   display: block;
@@ -1654,7 +1658,7 @@ label.renewal {
 .carousel-inner img {
   height: 100vh;
   object-fit: cover;
-   background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
+   background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   opacity: 0.7;
   mix-blend-mode: overlay;
 }
@@ -1722,7 +1726,7 @@ label.renewal {
     letter-spacing: 0.2rem;
     text-align: center;
     line-height: 1.4;
-    
+
 }
 
 #carouselContent .carouselContent__names {
@@ -1872,7 +1876,7 @@ label.renewal {
   color: #fff;
   background-color: #fff4;
   border-color: #fff6;
- 
+
 }
 #supportZone .supportZone__form form div input::placeholder ,#supportZone .supportZone__form form div textarea::placeholder
 {
@@ -2095,7 +2099,7 @@ label.renewal {
 }
 #packagePopup #bottomContents button:hover {
   background-color: #fff;
-} 
+}
 #packagePopup #bottomContents #renewalCheckbox {
   display: block;
   margin-left: 15px;
@@ -2158,11 +2162,34 @@ label.renewal {
   .bg {
     padding: 0px;
   }
+
+  .section__header--title
+  {
+    padding: 0 0 2rem;
+  }
+  #supportZone {
+    min-height: 550px;
+}
+#supportZone .supportZone__form {
+    padding: 1rem !important;
+}
+.supportZone__form h2 {
+    font-size: 1.6rem;
+}
+  .ml-5 {
+    margin-left: 1rem!important;
+}
   .gcarrousel__item h2 {
     letter-spacing: 0.03rem;
     margin-bottom: 0rem;
     text-align: center;
     padding: 0.2rem 0;
+}
+#taandtm .title {
+    font-size: 18px;
+}
+#footer .footer__firstc h4, #footer .footer__secondc h4, #footer .footer__thirdc h4 {
+    font-size: 16px;
 }
 .submenu {
   position: absolute;
@@ -2171,6 +2198,11 @@ label.renewal {
   background: #1c2833;
   list-style: none;
   width: 140px;
+}
+#footer .footer__firstc h2, #footer .footer__secondc h2, #footer .footer__thirdc h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 #header span {
   display: none;
@@ -2187,8 +2219,11 @@ label.renewal {
 #footer {
     padding: 20px;
 }
-  .card-body {
-    padding: 0.7rem;
+.card-body {
+    padding: 0.3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .bg-color {
     padding: 20px 0;
@@ -2210,10 +2245,12 @@ label.renewal {
 }
 .card-hover {
     margin-bottom: 0.5rem;
-   
+
 }
 .section__header--title {
-  text-align: left;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.6rem;
 }
   .section {
     padding: 16px 0;

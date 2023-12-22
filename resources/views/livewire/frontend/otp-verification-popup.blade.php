@@ -25,7 +25,7 @@
                     <div class="form-group d-flex justify-content-center align-items-center">
                         <span id="sequence">{!! $sequence . ' -  ' !!}</span>
                         <input type="text" class="form-control" id="otp" aria-describedby="emailHelp"
-                            placeholder="Inter the 4-Digit Code" style="width: 100%;" wire:model.lazy='otp'>
+                            placeholder="Enter the 4-Digit Code" style="width: 100%;" wire:model.lazy='otp'>
                     </div>
                     <button type="submit" class="btn">Submit</button>
                 </form>

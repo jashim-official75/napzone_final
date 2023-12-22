@@ -191,7 +191,7 @@
             <div class="container bg-color">
                 <div class="row section__header">
                     <div class="col-12 ">
-                        <h2 class="section__header--title pt-5" data-aos="fade-left"> <span><i
+                        <h2 class="section__header--title py-5" data-aos="fade-left"> <span><i
                                     class="fas fa-gamepad"></i></span> All Games</h2>
                     </div>
                 </div>
@@ -261,7 +261,7 @@
         <div class="container bg-color">
             <div class="row section__header ">
                 <div class="col-12 ">
-                    <h2 class="section__header--title pt-5" data-aos="fade-left"> <span><i
+                    <h2 class="section__header--title py-5" data-aos="fade-left"> <span><i
                                 class="fas fa-play-circle"></i></span> Trailer & Gameplay</h2>
                 </div>
             </div>
